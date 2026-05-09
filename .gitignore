@@ -1,0 +1,4 @@
+node_modules/
+.claude/
+*.zip
+zip.ps1

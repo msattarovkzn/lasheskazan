@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Maaybe Lash — Наращивание ресниц в Казани</title>
+  <meta name="description" content="Студия наращивания ресниц Maaybe Lash. Казань, ул. Чуйкова 2А. Мастер Ильнара Магадеева — 6 лет опыта. Классика от 2000₽. Запись онлайн.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      document.querySelectorAll('img[src],video[src]').forEach(el=>{
+        const s=el.getAttribute('src');
+        if(s&&!s.startsWith('http')&&!s.startsWith('data:')&&!s.startsWith('blob:')&&!/%[0-9A-Fa-f]{2}/.test(s)){
+          el.setAttribute('src',s.split('/').map(seg=>encodeURIComponent(seg)).join('/'));
+        }
+      });
+    });
+  </script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --pk:#E91E8C;--pk2:#F472B6;--pk3:#FFD1E8;--pkd:#BE185D;
+  --pur:#9333EA;--tg:#229ED9;--max:#6B48FF;--wa:#25D366;--inst:#E1306C;
+  --txt:#2D1B3D;--txl:#7C6A87;--cbg:rgba(255,255,255,.93);
+  --sh:0 4px 24px rgba(233,30,140,.13);--r:16px;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Nunito',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:#FFF0F7;color:var(--txt);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+@media(max-width:768px){
+  body{max-width:480px;margin:0 auto}
+}
+
+/* ── HERO ──────────────────────────────── */
+.hero{
+  background:linear-gradient(160deg,#FFB3D4 0%,#E91E8C 52%,#9333EA 100%);
+  padding:28px 20px 36px;position:relative;overflow:hidden;
+}
+.hero::before{content:'';position:absolute;width:320px;height:320px;
+  background:rgba(255,255,255,.09);border-radius:50%;top:-90px;right:-90px;pointer-events:none}
+.hero::after{content:'';position:absolute;width:200px;height:200px;
+  background:rgba(255,255,255,.06);border-radius:50%;bottom:-60px;left:-60px;pointer-events:none}
+.logo{font-family:'Dancing Script',cursive;font-size:42px;color:#fff;
+  line-height:1;margin-bottom:3px;position:relative;z-index:1;
+  text-shadow:0 2px 12px rgba(0,0,0,.18)}
+.logo-sub{color:rgba(255,255,255,.88);font-size:12px;letter-spacing:2.5px;
+  text-transform:uppercase;margin-bottom:22px;position:relative;z-index:1}
+
+/* ── HERO LAYOUT ───────────────────────── */
+/* Mobile: hero is a flex column; hvs appears between logo-sub and h1 */
+.hero{display:flex;flex-direction:column}
+.hero-left{display:contents}
+/* On mobile with display:contents, use order to keep video in right place */
+.logo{order:1}
+.logo-sub{order:2}
+.hvs{order:3}
+.hero h1{order:4}
+.hero-contacts{order:5}
+.hero-btns{order:6;display:flex;flex-direction:column;gap:0;width:100%}
+.hero-btns .btn-book{margin-bottom:12px}
+.hero-btns .btn-max{margin-bottom:0}
+
+/* ── HERO VIDEO SLIDER ─────────────────── */
+.hvs{position:relative;overflow:hidden;border-radius:20px;
+  aspect-ratio:4/5;margin-bottom:22px;
+  box-shadow:0 10px 36px rgba(0,0,0,.28);z-index:1}
+.hvs-track{display:flex;height:100%;
+  transition:transform .38s cubic-bezier(.25,.46,.45,.94)}
+.hvs-slide{flex-shrink:0;width:100%;height:100%}
+.hvs-slide video{width:100%;height:100%;object-fit:cover;display:block}
+.hvs-dots{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);
+  display:flex;gap:6px;z-index:2}
+.hvs-dot{width:8px;height:8px;border-radius:50%;
+  background:rgba(255,255,255,.5);transition:all .3s;cursor:pointer}
+.hvs-dot.active{background:#fff;width:24px;border-radius:4px}
+
+.hero h1{color:#fff;font-size:23px;font-weight:800;line-height:1.3;
+  margin-bottom:18px;position:relative;z-index:1}
+.hero h1 em{font-style:normal;text-decoration:underline;text-decoration-color:rgba(255,255,255,.4)}
+.hero-contacts{position:relative;z-index:1;margin-bottom:22px}
+.hrow{display:flex;align-items:center;gap:10px;color:#fff;font-size:15px;
+  font-weight:600;margin-bottom:9px}
+.hrow a{color:#fff;text-decoration:none}
+.hero-tag{display:inline-flex;align-items:center;gap:7px;
+  background:rgba(255,255,255,.2);backdrop-filter:blur(8px);
+  color:#fff;font-size:13px;font-weight:700;padding:7px 16px;
+  border-radius:50px;margin-top:4px}
+
+/* ── КНОПКИ ────────────────────────────── */
+.btn-book{display:flex;align-items:center;justify-content:center;gap:10px;
+  background:#fff;color:var(--pk);font-family:inherit;font-size:16px;
+  font-weight:800;padding:16px 24px;border-radius:50px;text-decoration:none;
+  border:none;cursor:pointer;margin-bottom:12px;width:100%;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);position:relative;z-index:1;
+  -webkit-tap-highlight-color:transparent;transition:transform .12s;
+  animation:bookPulse 2.2s ease-in-out infinite}
+.btn-book:active{transform:scale(.97)}
+@keyframes bookPulse{
+  0%,100%{box-shadow:0 6px 18px rgba(0,0,0,.18),0 0 0 0 rgba(255,255,255,.55)}
+  50%{box-shadow:0 6px 18px rgba(0,0,0,.18),0 0 0 10px rgba(255,255,255,0)}
+}
+
+.btn-max{display:flex;align-items:center;justify-content:center;gap:10px;
+  background:linear-gradient(135deg,#6B48FF,#A855F7);color:#fff;
+  font-family:inherit;font-size:16px;font-weight:800;padding:16px 24px;
+  border-radius:50px;text-decoration:none;width:100%;
+  position:relative;z-index:1;
+  box-shadow:0 6px 18px rgba(107,72,255,.45);
+  -webkit-tap-highlight-color:transparent;transition:transform .12s}
+.btn-max:active{transform:scale(.97)}
+
+.btn-tg{display:flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--tg);color:#fff;font-family:inherit;font-size:16px;
+  font-weight:800;padding:16px 24px;border-radius:50px;text-decoration:none;
+  width:100%;position:relative;z-index:1;
+  box-shadow:0 6px 18px rgba(34,158,217,.38);
+  -webkit-tap-highlight-color:transparent;transition:transform .12s}
+.btn-tg:active{transform:scale(.97)}
+
+.btn-grad{display:flex;align-items:center;justify-content:center;gap:10px;
+  background:linear-gradient(135deg,var(--pk),var(--pur));color:#fff;
+  font-family:inherit;font-size:16px;font-weight:800;
+  padding:16px 24px;border-radius:50px;text-decoration:none;
+  -webkit-tap-highlight-color:transparent;
+  animation:btnBreathe 2.6s ease-in-out infinite}
+.btn-grad:active{transform:scale(.96)!important;animation:none}
+@keyframes btnBreathe{
+  0%,100%{box-shadow:0 6px 22px rgba(233,30,140,.38);transform:scale(1)}
+  50%{box-shadow:0 8px 34px rgba(233,30,140,.65),0 0 0 7px rgba(233,30,140,.13);transform:scale(1.025)}
+}
+
+/* ── SECTIONS ──────────────────────────── */
+.sec{padding:28px 20px}
+.sec-white{background:#fff}.sec-light{background:#FFF5FA}
+.sec-pink{background:linear-gradient(160deg,#FFE4F0,#FFD1E8)}
+.sep{height:8px;background:linear-gradient(to right,rgba(233,30,140,.07),rgba(147,51,234,.07))}
+.sec-title{font-size:21px;font-weight:800;color:var(--txt);margin-bottom:16px;
+  display:flex;align-items:center;gap:10px}
+.sec-title::after{content:'';flex:1;height:2px;
+  background:linear-gradient(to right,var(--pk),transparent);border-radius:2px}
+
+/* ── STATS ─────────────────────────────── */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  background:linear-gradient(135deg,var(--pk),var(--pur))}
+.stat{padding:16px 8px;text-align:center;border-right:1px solid rgba(255,255,255,.15)}
+.stat:last-child{border-right:none}
+.stat-n{font-size:22px;font-weight:800;color:#fff;line-height:1}
+.stat-l{font-size:10px;color:rgba(255,255,255,.82);margin-top:3px;line-height:1.2}
+
+/* ── PAIN ──────────────────────────────── */
+.pain-grid{display:flex;flex-direction:column;gap:12px}
+.pain-card{background:var(--cbg);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.pain-top{padding:14px 16px 10px;display:flex;align-items:flex-start;gap:10px;
+  background:rgba(239,68,68,.06);border-bottom:1px dashed rgba(239,68,68,.15)}
+.pain-emoji{font-size:22px;flex-shrink:0;margin-top:1px}
+.pain-q{font-size:14px;font-weight:700;color:#991B1B;line-height:1.4}
+.pain-bot{padding:12px 16px 14px;display:flex;align-items:flex-start;gap:10px}
+.pain-check{width:22px;height:22px;border-radius:50%;
+  background:linear-gradient(135deg,var(--pk),var(--pur));
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px}
+.pain-a{font-size:14px;font-weight:600;color:var(--txt);line-height:1.5}
+
+/* ── WORKS GALLERY (LIGHTBOX) ──────────── */
+.works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.wg-item{position:relative;aspect-ratio:3/4;overflow:hidden;border-radius:10px;
+  cursor:pointer;background:#f0e0ea}
+.wg-item img,.wg-item video{width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .25s}
+.wg-item:active img,.wg-item:active video{transform:scale(.96)}
+.wg-item-play{position:absolute;inset:0;display:flex;align-items:center;
+  justify-content:center;background:rgba(0,0,0,.18)}
+.wg-item-play svg{filter:drop-shadow(0 2px 6px rgba(0,0,0,.5))}
+.swipe-hint{text-align:center;font-size:12px;color:var(--txl);margin-top:8px}
+/* ── CAROUSEL ARROWS ─────────────────── */
+.car-nav{position:relative}
+.car-arr{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:44px;height:44px;border-radius:50%;
+  background:rgba(255,255,255,.95);border:none;cursor:pointer;
+  display:none;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(0,0,0,.18);z-index:5;
+  color:var(--txt);transition:all .2s;
+  -webkit-tap-highlight-color:transparent}
+.car-arr:hover{background:#fff;box-shadow:0 6px 28px rgba(0,0,0,.25);transform:translateY(-50%) scale(1.08)}
+.car-arr-l{left:-20px}
+.car-arr-r{right:-20px}
+
+
+/* ── VIDEO CAROUSEL (одно на экране) ───── */
+.vid-car-wrap{position:relative;border-radius:16px;overflow:hidden;
+  background:#111;aspect-ratio:3/4;box-shadow:var(--sh)}
+.vid-car-track{display:flex;height:100%;
+  transition:transform .35s cubic-bezier(.25,.46,.45,.94)}
+.vid-car-slide{flex-shrink:0;width:100%;height:100%;position:relative}
+.vid-car-slide video{width:100%;height:100%;object-fit:cover;display:block}
+.vid-car-ov{position:absolute;inset:0;display:flex;align-items:center;
+  justify-content:center;background:rgba(0,0,0,.25);cursor:pointer;transition:opacity .2s}
+.vid-car-ov.hidden{opacity:0;pointer-events:none}
+.vid-car-ov .play-circle{width:64px;height:64px;border-radius:50%;
+  background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center}
+.vid-car-dots{display:flex;justify-content:center;gap:6px;margin-top:12px;flex-wrap:wrap}
+.vid-car-dot{width:7px;height:7px;border-radius:50%;background:var(--pk3);
+  cursor:pointer;transition:all .28s;border:none;padding:0}
+.vid-car-dot.active{background:var(--pk);width:20px;border-radius:4px}
+.vid-car-counter{text-align:center;font-size:12px;color:var(--txl);margin-top:6px}
+
+/* ── WORKS CAROUSEL (3 видно) ──────────── */
+.works-car{overflow-x:scroll;-webkit-overflow-scrolling:touch;scrollbar-width:none;
+  display:flex;gap:8px;scroll-snap-type:x mandatory;
+  margin:0 -20px;padding:4px 20px 14px}
+.works-car::-webkit-scrollbar{display:none}
+.wc-item{flex-shrink:0;scroll-snap-align:start;
+  width:calc(33.33% - 6px);aspect-ratio:3/4;
+  border-radius:10px;overflow:hidden;cursor:pointer;background:#f0e0ea}
+.wc-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s}
+.wc-item:active img{transform:scale(.95)}
+
+/* ── LIGHTBOX ──────────────────────────── */
+.lb{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.97);
+  display:none;flex-direction:column;align-items:center;justify-content:center;
+  -webkit-tap-highlight-color:transparent}
+.lb.active{display:flex}
+.lb-close{position:absolute;top:16px;right:16px;width:42px;height:42px;
+  border-radius:50%;background:rgba(255,255,255,.15);border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;z-index:10}
+.lb-counter{position:absolute;top:20px;left:50%;transform:translateX(-50%);
+  color:rgba(255,255,255,.7);font-size:13px;font-weight:700;font-family:'Nunito',sans-serif}
+.lb-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
+  color:rgba(255,255,255,.45);font-size:12px;font-weight:600;white-space:nowrap;
+  font-family:'Nunito',sans-serif}
+.lb-content{position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.lb-track{display:flex;height:100%;width:100%;transition:transform .32s cubic-bezier(.25,.46,.45,.94)}
+.lb-slide{flex-shrink:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:60px 8px 80px}
+.lb-slide img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px}
+.lb-slide video{max-width:100%;max-height:100%;border-radius:8px;outline:none}
+.lb-arr{position:absolute;top:50%;transform:translateY(-50%);
+  width:40px;height:40px;background:rgba(255,255,255,.12);border:none;
+  border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:5}
+.lb-arr-l{left:10px}.lb-arr-r{right:10px}
+
+/* ── QUIZ ──────────────────────────────── */
+.quiz-trigger-wrap{display:flex;flex-direction:column;align-items:center;
+  gap:16px;padding:20px 0 8px;cursor:pointer}
+.quiz-trigger{position:relative;width:180px;height:180px;flex-shrink:0;
+  overflow:hidden;isolation:isolate}
+.quiz-btn-img{position:absolute;inset:24px;border-radius:50%;
+  background:#fff;
+  box-shadow:0 8px 32px rgba(233,30,140,.35);border:3px solid rgba(233,30,140,.2);
+  display:flex;align-items:center;justify-content:center;z-index:1}
+.quiz-rotate-wrap{position:absolute;inset:0;
+  animation:rotateSvg 9s linear infinite;z-index:2}
+@keyframes rotateSvg{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.quiz-rotate-svg{width:100%;height:100%;overflow:visible;display:block}
+.quiz-trigger-label{font-size:14px;font-weight:700;color:var(--txl);text-align:center;line-height:1.4}
+
+.quiz-body{display:none}
+.quiz-body.visible{display:block}
+.quiz-wrap{background:var(--cbg);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+.quiz-progress{height:4px;background:var(--pk3)}
+.quiz-bar{height:4px;background:linear-gradient(to right,var(--pk),var(--pur));
+  transition:width .4s ease;border-radius:4px}
+.quiz-step{padding:22px 20px;display:none}
+.quiz-step.active{display:block}
+.quiz-q{font-size:17px;font-weight:800;color:var(--txt);margin-bottom:16px;line-height:1.4}
+.quiz-opts{display:flex;flex-direction:column;gap:10px}
+.quiz-opt{display:flex;align-items:center;gap:12px;padding:14px 16px;
+  background:#FFF5FA;border:2px solid var(--pk3);border-radius:12px;
+  cursor:pointer;font-size:15px;font-weight:600;color:var(--txt);
+  -webkit-tap-highlight-color:transparent;transition:all .18s}
+.quiz-opt:active,.quiz-opt.selected{background:linear-gradient(135deg,rgba(233,30,140,.08),rgba(147,51,234,.08));border-color:var(--pk)}
+.quiz-opt-icon{font-size:24px;flex-shrink:0}
+.quiz-result{padding:24px 20px;text-align:center;display:none}
+.quiz-result.active{display:block}
+.quiz-result-tag{display:inline-block;background:linear-gradient(135deg,var(--pk),var(--pur));
+  color:#fff;font-size:12px;font-weight:700;padding:5px 14px;border-radius:50px;margin-bottom:12px}
+.quiz-result-name{font-size:22px;font-weight:800;color:var(--txt);margin-bottom:4px}
+.quiz-result-price{font-size:28px;font-weight:800;color:var(--pk);margin-bottom:8px}
+.quiz-result-desc{font-size:14px;color:var(--txl);line-height:1.6;margin-bottom:20px}
+.quiz-again{background:none;border:none;color:var(--txl);font-family:inherit;
+  font-size:13px;cursor:pointer;text-decoration:underline;margin-top:10px}
+
+/* ── ABOUT ─────────────────────────────── */
+.about-card{background:var(--cbg);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.about-photo{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top center;display:block}
+.about-body{padding:20px}
+.about-name{font-size:22px;font-weight:800;color:var(--txt);margin-bottom:3px}
+.about-role{color:var(--pk);font-size:14px;font-weight:700;margin-bottom:12px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:13px}
+.badge{background:var(--pk3);color:var(--pkd);font-size:12px;font-weight:700;padding:5px 13px;border-radius:50px}
+.about-text{font-size:14px;color:var(--txl);line-height:1.65}
+
+/* ── SEO ───────────────────────────────── */
+.seo-card{background:var(--cbg);border-radius:var(--r);padding:22px;box-shadow:var(--sh)}
+.seo-title{font-size:18px;font-weight:800;color:var(--txt);margin-bottom:14px;
+  padding-bottom:12px;border-bottom:2px solid var(--pk3)}
+.seo-text{font-size:14px;color:var(--txl);line-height:1.75}
+.seo-text p{margin-bottom:10px}
+.seo-text p:last-child{margin-bottom:0}
+
+/* ── PRICE ─────────────────────────────── */
+.price-list{background:var(--cbg);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.pr{display:flex;align-items:center;justify-content:space-between;
+  padding:14px 18px;border-bottom:1px solid #FFE4F0;
+  cursor:pointer;gap:12px;user-select:none;-webkit-tap-highlight-color:transparent}
+.pr:last-child{border-bottom:none}
+.pr-name{font-size:15px;font-weight:700;color:var(--txt);flex:1}
+.pr-val{font-size:16px;font-weight:800;color:var(--pk);white-space:nowrap}
+.pr-free{color:#10B981}
+.pr-detail{padding:0 18px;max-height:0;overflow:hidden;
+  transition:max-height .3s ease,padding .3s ease;
+  font-size:13px;color:var(--txl);line-height:1.6}
+.pr-detail.open{max-height:100px;padding:8px 18px 14px}
+.pr-arrow{flex-shrink:0;transition:transform .28s;color:var(--txl)}
+.pr.open-row .pr-arrow{transform:rotate(180deg)}
+.pr.open-row{background:linear-gradient(135deg,rgba(233,30,140,.04),rgba(147,51,234,.04))}
+
+/* ── FAQ ───────────────────────────────── */
+.faq-list{display:flex;flex-direction:column;gap:10px}
+.faq-item{background:var(--cbg);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:16px 18px;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none}
+.faq-q-text{font-size:15px;font-weight:700;color:var(--txt);flex:1;line-height:1.4}
+.faq-arr{flex-shrink:0;transition:transform .28s;color:var(--txl)}
+.faq-item.open .faq-arr{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .3s ease;
+  font-size:14px;color:var(--txl);line-height:1.65;padding:0 18px}
+.faq-item.open .faq-a{max-height:200px;padding:0 18px 16px}
+
+/* ── SOCIAL ────────────────────────────── */
+.social-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sb{display:flex;align-items:center;justify-content:center;flex-direction:column;
+  gap:6px;padding:18px 12px;border-radius:var(--r);text-decoration:none;
+  font-weight:700;font-size:14px;-webkit-tap-highlight-color:transparent;transition:transform .12s}
+.sb:active{transform:scale(.96)}
+.sb span{font-size:11px;font-weight:400;opacity:.82}
+.sb-tg{background:var(--tg);color:#fff}
+.sb-max{background:linear-gradient(135deg,#6B48FF,#A855F7);color:#fff}
+.sb-inst{background:linear-gradient(135deg,#F58529,#DD2A7B,#8134AF);color:#fff}
+.sb-map{background:#FC3F1D;color:#fff}
+.sb-ch{grid-column:span 2;display:flex;align-items:center;gap:14px;
+  padding:16px 20px;border-radius:var(--r);
+  background:linear-gradient(135deg,#229ED9,#1565C0);
+  color:#fff;text-decoration:none;-webkit-tap-highlight-color:transparent;
+  transition:transform .12s, box-shadow .12s;
+  animation:chPulse 3s ease-in-out infinite}
+.sb-ch:active{transform:scale(.98)}
+@keyframes chPulse{
+  0%,100%{box-shadow:0 4px 16px rgba(34,158,217,.3);transform:scale(1)}
+  50%{box-shadow:0 6px 28px rgba(34,158,217,.75),0 0 0 8px rgba(34,158,217,.18);transform:scale(1.025)}
+}
+.sb-ch-t{flex:1}
+.sb-ch-title{font-size:16px;font-weight:800}
+.sb-ch-sub{font-size:12px;opacity:.85;margin-top:2px}
+
+/* ── SLOTS ─────────────────────────────── */
+.slots-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.slot{background:var(--cbg);border-radius:12px;padding:14px 12px;
+  text-align:center;box-shadow:var(--sh);border:2px solid var(--pk3)}
+.slot-day{font-size:13px;font-weight:700;color:var(--txl)}
+.slot-time{font-size:20px;font-weight:800;color:var(--pk);margin:4px 0}
+.slot-status{font-size:11px;color:#10B981;font-weight:700}
+.slot-busy{border-color:#eee}
+.slot-busy .slot-time{color:#ccc}
+.slot-busy .slot-status{color:#ccc}
+
+/* ── VOICE REVIEWS ─────────────────────── */
+.voice-card{background:var(--cbg);border-radius:var(--r);padding:20px;
+  margin-bottom:12px;box-shadow:var(--sh)}
+.vc-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.vc-ava{width:48px;height:48px;border-radius:50%;overflow:hidden;flex-shrink:0}
+.vc-ava img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.vc-nm{font-size:15px;font-weight:800;color:var(--txt)}
+.vc-svc{font-size:12px;color:var(--txl);margin-top:2px}
+.stars{color:#FBBF24;font-size:15px;letter-spacing:2px;margin-top:4px}
+.vc-play-btn{display:flex;align-items:center;gap:10px;
+  background:linear-gradient(135deg,var(--pk),var(--pur));
+  color:#fff;border:none;border-radius:50px;padding:10px 18px;
+  font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;
+  margin-bottom:12px;-webkit-tap-highlight-color:transparent;transition:transform .12s}
+.vc-play-btn:active{transform:scale(.96)}
+.vc-text{font-size:14px;color:var(--txt);line-height:1.65;display:none}
+.vc-text.visible{display:block}
+
+/* ── REVIEW CAROUSEL ───────────────────── */
+.rev-carousel-wrap{position:relative;overflow:hidden;border-radius:var(--r)}
+.rev-carousel-track{display:flex;transition:transform .35s cubic-bezier(.25,.46,.45,.94)}
+.rev-carousel-item{flex-shrink:0;width:100%}
+.rev-carousel-item img{width:100%;height:auto;display:block;border-radius:var(--r)}
+.rev-dots{display:flex;justify-content:center;gap:7px;margin-top:14px}
+.rev-dot{width:8px;height:8px;border-radius:50%;background:var(--pk3);
+  cursor:pointer;transition:all .28s}
+.rev-dot.active{background:var(--pk);width:22px;border-radius:4px}
+
+/* ── CAROUSEL (old) ──── */
+.carousel{margin:0 -20px;overflow-x:scroll;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;display:flex;gap:12px;padding:4px 20px 14px;
+  scroll-snap-type:x mandatory}
+.carousel::-webkit-scrollbar{display:none}
+.c-slide{flex-shrink:0;scroll-snap-align:start;border-radius:var(--r);
+  overflow:hidden;box-shadow:var(--sh)}
+.c-slide img,.c-slide video{display:block;width:100%;height:100%;object-fit:cover}
+.int-slide{width:230px;height:170px}
+.nav-slide{width:260px;height:auto}
+.nav-slide img{width:100%;height:auto;object-fit:contain}
+
+/* ── MAP ───────────────────────────────── */
+.map-wrap{border-radius:var(--r) var(--r) 0 0;overflow:hidden;box-shadow:var(--sh)}
+.map-wrap iframe{width:100%;height:300px;border:none;display:block}
+.map-addr{background:var(--cbg);padding:16px 18px;
+  border-radius:0 0 var(--r) var(--r);
+  display:flex;align-items:center;gap:10px;
+  font-size:14px;font-weight:600;color:var(--txt)}
+.map-addr svg{flex-shrink:0;color:var(--pk)}
+
+/* ── NAV STEPS ─────────────────────────── */
+.nav-steps{display:flex;flex-direction:column;gap:10px}
+.nav-step{display:flex;align-items:center;gap:12px;background:var(--cbg);
+  border-radius:12px;padding:13px 15px;box-shadow:var(--sh)}
+.nav-step-num{width:32px;height:32px;border-radius:50%;
+  background:linear-gradient(135deg,var(--pk),var(--pur));
+  color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;
+  justify-content:center;flex-shrink:0}
+.nav-step-text{font-size:14px;font-weight:600;color:var(--txt);line-height:1.4}
+
+/* ── GIFT BANNER ───────────────────────── */
+.gift-banner{
+  background:linear-gradient(135deg,#BE185D,#E91E8C,#9333EA);
+  padding:20px 20px;display:flex;flex-direction:column;gap:14px;
+  position:relative;overflow:hidden}
+.gift-banner::before{content:'';position:absolute;width:180px;height:180px;
+  border-radius:50%;background:rgba(255,255,255,.1);top:-60px;right:-40px}
+.gift-top-row{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.gift-left{flex:1;z-index:1}
+.gift-tag{display:inline-block;background:rgba(255,255,255,.25);
+  color:#fff;font-size:11px;font-weight:800;padding:3px 10px;
+  border-radius:50px;margin-bottom:6px;letter-spacing:.5px}
+.gift-title{font-size:26px;font-weight:800;color:#fff;line-height:1;margin-bottom:4px}
+.gift-sub{font-size:13px;color:rgba(255,255,255,.9);line-height:1.4;margin-bottom:12px}
+.gift-btn{display:block;background:#fff;color:#BE185D;
+  font-family:inherit;font-size:15px;font-weight:800;
+  padding:14px 18px;border-radius:50px;text-decoration:none;
+  text-align:center;width:100%;
+  box-shadow:0 4px 14px rgba(0,0,0,.15);transition:transform .12s;
+  -webkit-tap-highlight-color:transparent}
+.gift-btn:active{transform:scale(.96)}
+.gift-icon{font-size:52px;flex-shrink:0;z-index:1;
+  animation:giftBounce 2s ease-in-out infinite}
+@keyframes giftBounce{
+  0%,100%{transform:translateY(0) rotate(-5deg)}
+  50%{transform:translateY(-6px) rotate(5deg)}
+}
+
+/* ── BOTTOM NAV ────────────────────────── */
+.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:480px;background:#fff;
+  border-top:1px solid #FFE4F0;display:flex;align-items:stretch;
+  z-index:999;box-shadow:0 -4px 24px rgba(233,30,140,.14)}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:3px;padding:9px 4px 13px;text-decoration:none;
+  color:#B07AB0;font-size:10px;font-weight:700;-webkit-tap-highlight-color:transparent}
+.nav-item svg{width:22px;height:22px}
+.nav-item.center-nav{background:linear-gradient(160deg,var(--pk),var(--pur));color:#fff;
+  animation:navPulse 2.2s ease-in-out infinite}
+@keyframes navPulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(233,30,140,0);transform:scale(1)}
+  50%{box-shadow:0 -4px 20px rgba(233,30,140,.55),0 0 0 5px rgba(233,30,140,.18);transform:scale(1.06)}
+}
+.bottom-spacer{height:80px}
+
+/* ── FOOTER ────────────────────────────── */
+.footer{background:linear-gradient(160deg,#2D1B3D,#1A0A2E);
+  padding:32px 20px 20px;color:#fff}
+.footer-logo{font-family:'Dancing Script',cursive;font-size:32px;margin-bottom:6px}
+.footer-sub{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:20px;
+  letter-spacing:2px;text-transform:uppercase}
+.footer-row{display:flex;align-items:center;gap:10px;font-size:14px;
+  color:rgba(255,255,255,.75);margin-bottom:9px}
+.footer-row a{color:rgba(255,255,255,.75);text-decoration:none}
+.footer-copy{font-size:11px;color:rgba(255,255,255,.35);margin-top:24px;
+  padding-top:16px;border-top:1px solid rgba(255,255,255,.1);text-align:center}
+
+/* ══ DESKTOP (≥769px) ══════════════════════════════ */
+
+/* Desktop header hidden by default */
+.desk-header{display:none}
+
+@media(min-width:769px){
+  body{max-width:100%;padding-bottom:0;background:linear-gradient(160deg,#FFF0F7 0%,#F5E6FF 100%)}
+
+  /* Sticky top header */
+  .desk-header{
+    display:block;position:sticky;top:0;z-index:1000;
+    background:rgba(255,255,255,.97);backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(233,30,140,.12);
+    box-shadow:0 2px 16px rgba(233,30,140,.08)
+  }
+  .desk-header-inner{
+    max-width:1200px;margin:0 auto;padding:0 40px;
+    display:flex;align-items:center;gap:32px;height:64px
+  }
+  .desk-logo{
+    font-family:'Dancing Script',cursive;font-size:28px;
+    color:var(--pk);white-space:nowrap;flex-shrink:0
+  }
+  .desk-nav{display:flex;gap:24px;flex:1}
+  .desk-nav a{
+    color:var(--txt);text-decoration:none;font-size:14px;
+    font-weight:700;transition:color .2s
+  }
+  .desk-nav a:hover{color:var(--pk)}
+  .desk-book-btn{
+    background:linear-gradient(135deg,var(--pk),var(--pur));
+    color:#fff;text-decoration:none;padding:10px 24px;
+    border-radius:50px;font-size:14px;font-weight:800;
+    white-space:nowrap;flex-shrink:0;
+    box-shadow:0 4px 16px rgba(233,30,140,.35)
+  }
+
+  /* Bottom nav on desktop — full width */
+  .bottom-nav{display:flex!important;max-width:100%;left:0;transform:none;width:100%;padding:0 40px}
+  .bottom-spacer{display:block;height:80px}
+  .nav-item{font-size:12px;gap:4px}
+  .nav-item svg{width:24px;height:24px}
+
+  /* Page wrapper */
+  .hero,.sec,.stats,.sep{max-width:1200px;margin-left:auto;margin-right:auto}
+
+  /* ── HERO ── */
+  .hero{display:flex;flex-wrap:wrap;align-items:flex-start;gap:24px 40px;padding:48px 60px}
+  .hero-left{display:block;flex:1;min-width:300px}
+  .logo,.logo-sub,.hero h1,.hero-contacts{order:unset}
+  .hero h1{font-size:32px;margin-bottom:16px}
+
+  /* Все 3 видео в герое видны без свайпа */
+  .hvs{
+    flex:1;min-width:300px;flex-shrink:0;margin-bottom:0;
+    aspect-ratio:unset;height:420px;overflow:hidden
+  }
+  .hvs-track{transform:none!important;gap:6px;width:100%;display:flex}
+  .hvs-slide{width:calc(33.333% - 4px);flex-shrink:0;height:100%}
+  .hvs-dots{display:none}
+
+  /* Кнопки рядом, на всю ширину */
+  .hero-btns{width:100%;display:flex;flex-direction:row;gap:12px;order:10}
+  .hero-btns .btn-book,.hero-btns .btn-max{flex:1;margin-bottom:0;width:auto}
+
+  /* Stats */
+  .stats{max-width:1200px;margin:0 auto}
+
+  /* Sections */
+  .sec{padding:56px 60px}
+  .sec-title{font-size:26px}
+
+  /* Мои работы: 4 видно + горизонтальный скролл */
+  .works-grid{
+    display:flex;flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;
+    gap:10px;padding-bottom:8px;scrollbar-width:thin;
+    -webkit-overflow-scrolling:touch
+  }
+  .wg-item{flex-shrink:0;width:calc(25% - 8px);scroll-snap-align:start}
+
+  /* Pain 2-col */
+  .pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+  /* About horizontal */
+  .about-card{display:flex;flex-direction:row}
+  .about-photo{width:280px;height:auto;aspect-ratio:auto;flex-shrink:0}
+  .about-body{padding:32px}
+
+  /* Price */
+  .price-list{max-width:680px}
+
+  /* Quiz */
+  .quiz-trigger-wrap{padding:40px 0}
+  .quiz-trigger{width:220px;height:220px;overflow:hidden;isolation:isolate}
+
+  /* Говорят клиентки — одна строка */
+  .voice-reviews-row{display:flex;flex-wrap:nowrap;gap:16px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .voice-reviews-row .voice-card{flex-shrink:0;min-width:280px;flex:1;margin-bottom:0}
+
+  /* Отзывы 3 колонки */
+  .rev-carousel-wrap{overflow:visible}
+  .rev-carousel-track{flex-wrap:wrap;transform:none!important;gap:16px}
+  .rev-carousel-item{width:calc(33.333% - 11px);flex-shrink:0}
+  .rev-dots{display:none}
+
+  /* Gift banner — горизонтальный, выровненный */
+  .gift-banner{
+    display:flex;flex-direction:row;align-items:center;gap:40px;
+    padding:32px 60px;border-radius:var(--r);
+    max-width:1200px;margin:0 auto
+  }
+  .gift-top-row{flex:1;display:flex;flex-direction:row;align-items:center;gap:24px}
+  .gift-left{flex:1}
+  .gift-title{font-size:32px}
+  .gift-sub{margin-bottom:0}
+  .gift-icon{font-size:52px;flex-shrink:0;order:unset}
+  .gift-btn{
+    flex-shrink:0;width:auto;white-space:nowrap;
+    padding:16px 32px;align-self:center;margin-top:0
+  }
+
+  /* Map */
+  .map-wrap iframe{height:420px}
+
+  /* Footer */
+  .footer-inner{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+
+  /* Slots */
+  #slotsGrid{grid-template-columns:repeat(6,1fr)!important}
+
+  /* Видео работ: 3 видны + плавный свайп, без скроллбара */
+  .vid-car-wrap{
+    aspect-ratio:unset;height:380px;
+    overflow-x:auto;overflow-y:hidden;
+    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none;border-radius:16px;background:#111
+  }
+  .vid-car-wrap::-webkit-scrollbar{display:none}
+  .vid-car-track{transform:none!important;display:flex;gap:12px;height:100%;width:100%;overflow:visible}
+  .vid-car-slide{width:calc(33.333% - 8px);flex-shrink:0;scroll-snap-align:start;border-radius:12px;overflow:hidden}
+  .vid-car-dots,.vid-car-counter,.swipe-hint{display:none}
+
+  /* Works carousel — 4 видно, без скроллбара */
+  .works-car{
+    overflow-x:auto!important;flex-wrap:nowrap!important;
+    scrollbar-width:none!important;
+    margin:0!important;padding:4px 0 14px!important
+  }
+  .works-car::-webkit-scrollbar{display:none}
+  .wc-item{width:calc(25% - 6px)!important}
+
+
+  /* Arrows visible on desktop */
+  .car-arr{display:flex}
+  .car-nav{margin:0 24px}
+  /* FAQ */
+  .faq-list{max-width:800px;margin:0 auto}
+
+  body{background:linear-gradient(160deg,#FFF0F7 0%,#F5E6FF 100%)}
+}
+</style>
+</head>
+<body>
+
+<header class="desk-header" id="deskHeader">
+  <div class="desk-header-inner">
+    <div class="desk-logo">Maaybe Lash ✨</div>
+    <nav class="desk-nav">
+      <a href="#giftBanner">Акция</a>
+      <a href="#works">Работы</a>
+      <a href="#price">Цены</a>
+      <a href="#master">Мастер</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#map">Контакты</a>
+    </nav>
+    <a href="https://t.me/tourttty" target="_blank" rel="noopener noreferrer" class="desk-book-btn">📅 Записаться</a>
+  </div>
+</header>
+
+<!-- ══ HERO ══════════════════════════════ -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="logo">Maaybe Lash ✨</div>
+    <div class="logo-sub">Наращивание ресниц · Казань</div>
+    <h1>Ресницы, которые носишь <em>4–5 недель</em> — по честной цене</h1>
+    <div class="hero-contacts">
+      <div class="hrow">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.62 3.4 2 2 0 013.6 1.18h3a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.82a16 16 0 006.29 6.29l.95-.95a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <a href="tel:+79872510266">+7 (987) 251-02-66</a>
+      </div>
+      <div class="hrow">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        ул. Чуйкова 2А, Казань
+      </div>
+      <div class="hero-tag">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        Удобная парковка рядом
+      </div>
+    </div>
+  </div>
+
+  <!-- Видео слайдер -->
+  <div class="hvs" id="heroSlider">
+    <div class="hvs-track" id="hvsTrack">
+      <div class="hvs-slide">
+        <video id="hv0" autoplay muted loop playsinline preload="auto"
+          src="Видео на главную/IMG_6897.MOV"></video>
+      </div>
+      <div class="hvs-slide">
+        <video id="hv1" muted loop playsinline preload="none"
+          src="Видео на главную/IMG_6898.MOV"></video>
+      </div>
+      <div class="hvs-slide">
+        <video id="hv2" muted loop playsinline preload="none"
+          src="Видео на главную/IMG_6900.MOV"></video>
+      </div>
+    </div>
+    <div class="hvs-dots" id="hvsDots">
+      <span class="hvs-dot active" onclick="hvsGo(0)"></span>
+      <span class="hvs-dot" onclick="hvsGo(1)"></span>
+      <span class="hvs-dot" onclick="hvsGo(2)"></span>
+    </div>
+  </div>
+
+  <!-- Кнопки — отдельный ряд на десктопе -->
+  <div class="hero-btns">
+    <a href="https://t.me/tourttty" target="_blank" rel="noopener noreferrer" class="btn-book">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      📅 Записаться онлайн
+    </a>
+    <a href="https://max.ru/u/f9LHodD0cOKUH4Y4M5BEUObWbuNbG3Q5dssspVFIgyxtriH-PaD_sNgqJ8Y" target="_blank" rel="noopener noreferrer" class="btn-max">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+      Записаться через MAX
+    </a>
+  </div>
+</section>
+
+<!-- ══ БЛИЖАЙШИЕ ОКНА (сразу после hero) ══ -->
+<section class="sec sec-pink" style="padding:20px">
+  <div class="sec-title">📅 Ближайшие окна</div>
+  <p style="font-size:13px;color:var(--txl);margin-bottom:14px">Свободные места на эту неделю — торопись!</p>
+  <div class="slots-grid" id="slotsGrid"></div>
+  <a href="https://t.me/tourttty" target="_blank" rel="noopener noreferrer" class="btn-grad">Занять место</a>
+</section>
+
+<!-- ══ STATS ══════════════════════════════ -->
+<div class="stats">
+  <div class="stat"><div class="stat-n">6</div><div class="stat-l">лет<br>опыта</div></div>
+  <div class="stat"><div class="stat-n">4–5</div><div class="stat-l">недель<br>носки</div></div>
+  <div class="stat"><div class="stat-n">1500</div><div class="stat-l">₽ от<br>цена</div></div>
+  <div class="stat"><div class="stat-n">4.8★</div><div class="stat-l">15 отзывов<br>Яндекс</div></div>
+</div>
+
+<!-- ══ ОФФЕР НОВЫМ КЛИЕНТКАМ ══════════════ -->
+<section class="gift-banner" id="giftBanner">
+  <div class="gift-top-row">
+    <div class="gift-left">
+      <div class="gift-tag">🎁 Только для новых клиенток</div>
+      <div class="gift-title">Нижние ресницы<br>в&nbsp;подарок!</div>
+      <div class="gift-sub">При наращивании 2D — нижнее наращивание бесплатно
+        <br><s style="opacity:.7;font-size:12px">обычная цена 700&nbsp;₽</s> <strong>→ 0&nbsp;₽</strong>
+        <br><span style="font-size:12px;opacity:.85">Просто скажи при записи «хочу подарок»</span>
+      </div>
+    </div>
+    <div class="gift-icon" style="font-size:44px">✨👁️</div>
+  </div>
+  <a href="https://t.me/tourttty" target="_blank" rel="noopener noreferrer" class="gift-btn">🎁 Хочу подарок — Записаться в Telegram</a>
+</section>
+
+<!-- ══ БОЛИ / РЕШЕНИЯ ════════════════════ -->
+<div class="sep"></div>
+<section class="sec sec-light">
+  <div class="sec-title">💡 Узнаёшь себя?</div>
+  <div class="pain-grid">
+    <div class="pain-card">
+      <div class="pain-top"><div class="pain-emoji">😤</div><div class="pain-q">«Ресницы слетают уже через неделю»</div></div>
+      <div class="pain-bot"><div class="pain-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="pain-a">У нас держатся <strong>4–5 недель</strong> — используем только проверенный клей и правильную технику изоляции</div></div>
+    </div>
+    <div class="pain-card">
+      <div class="pain-top"><div class="pain-emoji">😰</div><div class="pain-q">«Боюсь, что это навредит моим ресницам»</div></div>
+      <div class="pain-bot"><div class="pain-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="pain-a">Бережная техника изоляции — натуральные ресницы не склеиваются и не перегружаются</div></div>
+    </div>
+    <div class="pain-card">
+      <div class="pain-top"><div class="pain-emoji">😒</div><div class="pain-q">«Обещали красиво — получила непонятно что»</div></div>
+      <div class="pain-bot"><div class="pain-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="pain-a">Подбираем эффект индивидуально, показываем работы заранее — сюрпризов не будет</div></div>
+    </div>
+    <div class="pain-card">
+      <div class="pain-top"><div class="pain-emoji">💸</div><div class="pain-q">«Трачу кучу денег на коррекции»</div></div>
+      <div class="pain-bot"><div class="pain-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="pain-a">Носишь дольше = реже корректируешь = реально экономишь. Плюс снятие при записи <strong>бесплатно</strong></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ МОИ РАБОТЫ ═════════════════════════ -->
+<div class="sep"></div>
+<section class="sec sec-white" id="works">
+  <div class="sec-title">✨ Мои работы</div>
+  <div class="car-nav">
+    <button class="car-arr car-arr-l" onclick="scrollCar(worksCar,-1)" aria-label="Назад"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <div class="works-car" id="worksCar"></div>
+    <button class="car-arr car-arr-r" onclick="scrollCar(worksCar,1)" aria-label="Вперёд"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></button>
+  </div>
+  <p class="swipe-hint">👆 Нажми на фото — откроется на весь экран</p>
+</section>
+
+<!-- ══ ВИДЕО РАБОТ ════════════════════════ -->
+<div class="sep"></div>
+<section class="sec sec-light">
+  <div class="sec-title">🎬 Видео работ</div>
+  <div class="car-nav">
+    <button class="car-arr car-arr-l" onclick="scrollCar(vidCarWrap,-1)" aria-label="Назад"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <div class="vid-car-wrap" id="vidCarWrap">
+      <div class="vid-car-track" id="vidCarTrack"></div>
+    </div>
+    <button class="car-arr car-arr-r" onclick="scrollCar(vidCarWrap,1)" aria-label="Вперёд"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></button>
+  </div>
+  <div class="vid-car-dots" id="vidCarDots"></div>
+  <div class="vid-car-counter" id="vidCarCounter"></div>
+  <p class="swipe-hint" style="margin-top:4px">← свайп → следующее видео</p>
+</section>
+
+<!-- ══ КВИЗ ═══════════════════════════════ -->
+<div class="sep"></div>
+<section class="sec sec-white">
+  <div class="sec-title">🎯 Узнай, какое наращивание подойдет тебе за 15 секунд!</div>
+  <p style="font-size:14px;color:var(--txl);margin-bottom:8px;line-height:1.5">Ответь на несколько вопросов и получи совет от наших специалистов</p>
+
+  <!-- Триггер-кнопка -->
+  <div class="quiz-trigger-wrap" id="quizTrigger" onclick="showQuiz()">
+    <div class="quiz-trigger">
+      <div class="quiz-btn-img">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke-width="0"><defs><linearGradient id="arrowG" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E91E8C"/><stop offset="100%" stop-color="#9333EA"/></linearGradient></defs><polygon points="7 4 20 12 7 20" fill="url(#arrowG)"/></svg>
+      </div>
+      <div class="quiz-rotate-wrap">
+        <svg class="quiz-rotate-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="circTxt" d="M100,14 A86,86 0 1,1 99.9,14" fill="none"/>
+          </defs>
+          <text font-family="Nunito,sans-serif" font-size="13" font-weight="800" fill="#E91E8C" letter-spacing="4">
+            <textPath href="#circTxt">ПРОЙТИ ТЕСТ • ПРОЙТИ ТЕСТ • ПРОЙТИ ТЕСТ • </textPath>
+          </text>
+        </svg>
+      </div>
+    </div>
+    <div class="quiz-trigger-label">Нажми и узнай свой эффект ✨</div>
+  </div>
+
+  <!-- Квиз (скрыт до клика) -->
+  <div class="quiz-body" id="quizBody">
+    <div class="quiz-wrap">
+      <div class="quiz-progress"><div class="quiz-bar" id="qBar" style="width:33%"></div></div>
+      <div class="quiz-step active" id="qs1">
+        <div class="quiz-q">Какой взгляд тебе больше нравится?</div>
+        <div class="quiz-opts">
+          <div class="quiz-opt" onclick="quizAnswer(1,1)"><span class="quiz-opt-icon">🌿</span>Естественный и аккуратный</div>
+          <div class="quiz-opt" onclick="quizAnswer(1,2)"><span class="quiz-opt-icon">💫</span>Объёмный и выразительный</div>
+          <div class="quiz-opt" onclick="quizAnswer(1,3)"><span class="quiz-opt-icon">👁️</span>Просто подчеркнуть уголки</div>
+        </div>
+      </div>
+      <div class="quiz-step" id="qs2">
+        <div class="quiz-q">Как часто готова ходить на коррекцию?</div>
+        <div class="quiz-opts">
+          <div class="quiz-opt" onclick="quizAnswer(2,1)"><span class="quiz-opt-icon">⏱️</span>Каждые 2–3 недели</div>
+          <div class="quiz-opt" onclick="quizAnswer(2,2)"><span class="quiz-opt-icon">📅</span>Раз в месяц и реже</div>
+        </div>
+      </div>
+      <div class="quiz-step" id="qs3">
+        <div class="quiz-q">Это твоё первое наращивание?</div>
+        <div class="quiz-opts">
+          <div class="quiz-opt" onclick="quizAnswer(3,1)"><span class="quiz-opt-icon">🌸</span>Да, первый раз!</div>
+          <div class="quiz-opt" onclick="quizAnswer(3,2)"><span class="quiz-opt-icon">✨</span>Нет, уже делала</div>
+        </div>
+      </div>
+      <div class="quiz-result" id="qResult">
+        <div class="quiz-result-tag">Твой идеальный эффект</div>
+        <div class="quiz-result-name" id="qResName">Классика</div>
+        <div class="quiz-result-price" id="qResPrice">2 000 ₽</div>
+        <div class="quiz-result-desc" id="qResDesc"></div>
+        <a href="https://t.me/tourttty" target="_blank" rel="noopener noreferrer" class="btn-grad" style="margin-top:0">Записаться на процедуру</a>
+        <br><button class="quiz-again" onclick="quizReset()">← Пройти снова</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ МАСТЕР ════════════════════════════ -->
+<div class="sep"></div>
+<section class="sec sec-pink" id="master">
+  <div class="sec-title">👤 Мастер</div>
+  <div class="about-card">
+    <img src="Фото мастер/photo_2026-05-05_23-17-53.jpg" alt="Ильнара Магадеева" class="about-photo">
+    <div class="about-body">
+      <div class="about-name">Ильнара Магадеева</div>
+      <div class="about-role">Владелец и мастер студии · 6 лет опыта</div>
+      <div class="badges">
+        <span class="badge">6 лет опыта</span>
+        <span class="badge">Регулярные обучения</span>
+        <span class="badge">Сертифицированный мастер</span>
+      </div>
+      <p class="about-text">За 6 лет практики сделала сотни процедур — клиентки становятся постоянными, потому что результат держится долго, а подход всегда индивидуальный. Постоянно обучается у ведущих специалистов.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ О СТУДИИ ══════════════════════════ -->
+<div class="sep"></div>
+<section class="sec sec-white">
+  <div class="sec-title">🏠 О студии</div>
+  <div class="seo-card">
+    <div class="seo-title">Наращивание ресниц в Казани</div>
+    <div class="seo-text">
+      <p>В студии Maaybe Lash вы можете сделать наращивание ресниц у опытного мастера в Казани. Ильнара подбирает объём, изгиб и эффект под форму глаз, пожелания и образ жизни — за 6 лет практики она сделала сотни процедур.</p>
+      <p>Работаем только с проверенными гипоаллергенными материалами. Процедура проходит комфортно, а результат выглядит естественно и держится 4–5 недель.</p>
+      <p>Доступны классика, уголки, объём 2D/3D, а также лучи, цветные ресницы и нестандартные изгибы — бесплатно как дополнение к основной услуге.</p>
+      <p>Студия находится по адресу ул. Чуйкова 2А — удобная парковка рядом. Спокойная атмосфера и индивидуальный подход на каждом визите.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ПРАЙС ══════════════════════════════ -->
+<div class="sep"></div>
+<section class="sec sec-light" id="price">
+  <div class="sec-title">💎 Прайс-лист</div>
+  <div class="price-list">
+    <div class="pr" onclick="togglePrice(this)">
+      <span class="pr-name">Классика</span><span class="pr-val">2 000 ₽</span>
+      <svg class="pr-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="pr-detail">Одна ресница на каждую натуральную. Естественный выразительный взгляд. Идеально для первой процедуры.</div>
+    <div class="pr" onclick="togglePrice(this)">
+      <span class="pr-name">Уголки</span><span class="pr-val">1 500 ₽</span>
+      <svg class="pr-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="pr-detail">Акцент на внешних уголках глаз — эффект «кошачьего» взгляда. Быстро и выразительно.</div>
+    <div class="pr" onclick="togglePrice(this)">
+      <span class="pr-name">1.5 / 2D</span><span class="pr-val">2 200 ₽</span>
+      <svg class="pr-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="pr-detail">Лёгкий объём — 1–2 ресницы на каждую натуральную. Пышнее классики, но выглядит естественно.</div>
+    <div class="pr" onclick="togglePrice(this)">
+      <span class="pr-name">2.5D / 3D</span><span class="pr-val">2 400 ₽</span>
+      <svg class="pr-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="pr-detail">Объёмные пучки из 2–3 ресниц. Голливудский результат — выразительный взгляд без туши.</div>
+    <div class="pr" onclick="togglePrice(this)">
+      <span class="pr-name">Нижнее наращивание</span><span class="pr-val">700 ₽</span>
+      <svg class="pr-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="pr-detail">Наращивание нижних ресниц — завершает образ и делает взгляд выразительным без туши снизу. При заказе 2D — бесплатно для новых клиенток!</div>
+    <div class="pr" onclick="togglePrice(this)">
+      <span class="pr-name">Лучи, цветные, изгибы</span><span class="pr-val pr-free">Бесплатно</span>
+      <svg class="pr-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="pr-detail">Эффект лучей, цветные ресницы, нестандартные изгибы — как дополнение бесплатно.</div>
+    <div class="pr" onclick="togglePrice(this)">
+      <span class="pr-name">Снятие без наращивания</span><span class="pr-val">300 ₽</span>
+      <svg class="pr-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="pr-detail">Профессиональное бережное снятие с гелем. Без вреда для натуральных ресниц.</div>
+    <div class="pr" onclick="togglePrice(this)">
+      <span class="pr-name">Снятие + наращивание</span><span class="pr-val pr-free">Бесплатно</span>
+      <svg class="pr-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="pr-detail">При записи на наращивание снятие старых ресниц включено в стоимость.</div>
+  </div>
+  <a href="https://t.me/tourttty" target="_blank" rel="noopener noreferrer" class="btn-grad" style="margin-top:16px">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Записаться на процедуру
+  </a>
+</section>
+
+<!-- ══ FAQ ════════════════════════════════ -->
+<div class="sep"></div>
+<section class="sec sec-white">
+  <div class="sec-title">❓ Частые вопросы</div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this.parentElement)">
+        <span class="faq-q-text">Сколько держатся ресницы?</span>
+        <svg class="faq-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="faq-a">В среднем 4–5 недель при правильном уходе. Это дольше, чем у большинства мастеров, потому что мы используем качественный клей и правильную технику изоляции.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this.parentElement)">
+        <span class="faq-q-text">Больно ли делать наращивание?</span>
+        <svg class="faq-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="faq-a">Нет, совсем не больно. Глаза закрыты, многие клиентки засыпают прямо во время процедуры.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this.parentElement)">
+        <span class="faq-q-text">Вредит ли наращивание натуральным ресницам?</span>
+        <svg class="faq-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="faq-a">При правильной технике — нет. Мы работаем методом изоляции: каждая искусственная ресница крепится строго на одну натуральную.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this.parentElement)">
+        <span class="faq-q-text">Что нельзя делать после процедуры?</span>
+        <svg class="faq-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="faq-a">Первые 24 часа: не мочить ресницы, избегать сауны и бассейна. После — не тереть глаза руками и использовать масло-free средства для снятия макияжа.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this.parentElement)">
+        <span class="faq-q-text">Как часто нужна коррекция?</span>
+        <svg class="faq-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="faq-a">Рекомендуем коррекцию раз в 3–4 недели. При бережном уходе наши клиентки иногда ходят раз в 5 недель.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this.parentElement)">
+        <span class="faq-q-text">Есть ли у вас гарантия?</span>
+        <svg class="faq-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="faq-a">Да! Если в течение первых 7 дней что-то не устроило — позвони и мы всё исправим бесплатно.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ СОЦИАЛЬНЫЕ СЕТИ ════════════════════ -->
+<div class="sep"></div>
+<section class="sec sec-light">
+  <div class="sec-title">📱 Мы в соцсетях</div>
+  <div class="social-grid">
+    <a href="https://t.me/tourttty" target="_blank" rel="noopener noreferrer" class="sb sb-tg">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+      Telegram<span>Записаться</span>
+    </a>
+    <a href="https://max.ru/u/f9LHodD0cOKUH4Y4M5BEUObWbuNbG3Q5dssspVFIgyxtriH-PaD_sNgqJ8Y" target="_blank" rel="noopener noreferrer" class="sb sb-max">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+      MAX<span>Онлайн запись</span>
+    </a>
+    <a href="https://www.instagram.com/maaybe.lash" target="_blank" rel="noopener noreferrer" class="sb sb-inst">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      Instagram<span>Работы и фото</span>
+    </a>
+    <a href="https://yandex.ru/maps/org/maaybe_lash/20996493690/" target="_blank" rel="noopener noreferrer" class="sb sb-map">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      Яндекс.Карты<span>Отзывы</span>
+    </a>
+    <a href="https://t.me/maaybelash" target="_blank" rel="noopener noreferrer" class="sb-ch">
+      <div style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+      </div>
+      <div class="sb-ch-t">
+        <div class="sb-ch-title">✨ Подписаться на канал</div>
+        <div class="sb-ch-sub">Акции, новинки, работы мастера</div>
+      </div>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+  </div>
+</section>
+
+
+<!-- ══ ГОВОРЯТ КЛИЕНТКИ ═══════════════════ -->
+<div class="sep"></div>
+<section class="sec sec-white" id="reviews">
+  <div class="sec-title">🎤 Говорят клиентки</div>
+  <p style="font-size:13px;color:var(--txl);margin-bottom:16px">Нажми ▶ и услышь историю</p>
+
+  <div class="voice-reviews-row">
+  <div class="voice-card">
+    <div class="vc-head">
+      <div class="vc-ava"><img src="Фото на аву/32a2cfbeda0b44315a3ce8ee6fb873f4.jpg" alt="Лилия"></div>
+      <div>
+        <div class="vc-nm">Лилия М.</div>
+        <div class="vc-svc" style="font-size:11px;color:var(--txl)">Вчера 14:30</div>
+        <div class="vc-svc">Классика · постоянная клиентка</div>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+    <button class="vc-play-btn" onclick="voicePlay(this,0)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      Воспроизвести отзыв
+    </button>
+    <div class="vc-text" id="vt0"></div>
+  </div>
+
+  <div class="voice-card">
+    <div class="vc-head">
+      <div class="vc-ava"><img src="Фото на аву/images.jpg" alt="Алина"></div>
+      <div>
+        <div class="vc-nm">Алина Н.</div>
+        <div class="vc-svc" style="font-size:11px;color:var(--txl)">28.04.2026 17:00</div>
+        <div class="vc-svc">Объём 2D · первая процедура</div>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+    <button class="vc-play-btn" onclick="voicePlay(this,1)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      Воспроизвести отзыв
+    </button>
+    <div class="vc-text" id="vt1"></div>
+  </div>
+
+  <div class="voice-card">
+    <div class="vc-head">
+      <div class="vc-ava"><img src="Фото на аву/images (2).jpg" alt="Ника"></div>
+      <div>
+        <div class="vc-nm">Ника С.</div>
+        <div class="vc-svc" style="font-size:11px;color:var(--txl)">01.05.2026 12:13</div>
+        <div class="vc-svc">3D объём · 5 месяцев клиентка</div>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+    <button class="vc-play-btn" onclick="voicePlay(this,2)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      Воспроизвести отзыв
+    </button>
+    <div class="vc-text" id="vt2"></div>
+  </div>
+  </div><!-- /voice-reviews-row -->
+</section>
+
+<!-- ══ ОТЗЫВЫ С КАРТ ══════════════════════ -->
+<div class="sep"></div>
+<section class="sec sec-light">
+  <div class="sec-title">⭐ Отзывы с Яндекс.Карт</div>
+  <div class="rev-carousel-wrap" id="revWrap">
+    <div class="rev-carousel-track" id="revTrack">
+      <div class="rev-carousel-item"><img src="Отзывы/Снимок экрана 2026-05-04 152725.png" alt="Отзыв" loading="lazy"></div>
+      <div class="rev-carousel-item"><img src="Отзывы/Снимок экрана 2026-05-04 152759.png" alt="Отзыв" loading="lazy"></div>
+      <div class="rev-carousel-item"><img src="Отзывы/Снимок экрана 2026-05-04 152817.png" alt="Отзыв" loading="lazy"></div>
+      <div class="rev-carousel-item"><img src="Отзывы/Снимок экрана 2026-05-04 152832.png" alt="Отзыв" loading="lazy"></div>
+      <div class="rev-carousel-item"><img src="Отзывы/Снимок экрана 2026-05-04 152845.png" alt="Отзыв" loading="lazy"></div>
+      <div class="rev-carousel-item"><img src="Отзывы/Снимок экрана 2026-05-04 152904.png" alt="Отзыв" loading="lazy"></div>
+    </div>
+  </div>
+  <div class="rev-dots" id="revDots"></div>
+  <div style="text-align:center;margin-top:16px">
+    <a href="https://yandex.ru/maps/org/maaybe_lash/20996493690/reviews/" target="_blank" style="color:var(--pk);font-size:14px;font-weight:700;text-decoration:none">Читать все отзывы →</a>
+  </div>
+</section>
+
+<!-- ══ СТУДИЯ ════════════════════════════ -->
+<div class="sep"></div>
+<section class="sec sec-white">
+  <div class="sec-title">🏠 Наша студия</div>
+  <div class="carousel">
+    <div class="c-slide int-slide"><img src="Интерьер/photo_4_2026-03-13_15-11-04.jpg" alt="Студия" loading="lazy"></div>
+    <div class="c-slide int-slide"><img src="Интерьер/photo_5_2026-03-13_15-11-04.jpg" alt="Студия" loading="lazy"></div>
+    <div class="c-slide int-slide"><img src="Интерьер/photo_6_2026-03-13_15-11-04.jpg" alt="Студия" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- ══ КАРТА ══════════════════════════════ -->
+<div class="sep"></div>
+<section class="sec sec-light" id="map">
+  <div class="sec-title">📍 Мы на карте</div>
+  <div class="map-wrap">
+    <iframe src="https://yandex.ru/map-widget/v1/?ll=49.102165%2C55.835235&z=16&pt=49.102165,55.835235,pm2rdl&l=map" allowfullscreen loading="lazy" title="Maaybe Lash на карте"></iframe>
+  </div>
+  <div class="map-addr">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    Казань, ул. Чуйкова 2А
+  </div>
+</section>
+
+<!-- ══ КАК НАС НАЙТИ ═════════════════════ -->
+<div class="sep"></div>
+<section class="sec sec-white">
+  <div class="sec-title">🗺️ Как нас найти</div>
+  <div class="nav-steps" style="margin-bottom:16px">
+    <div class="nav-step">
+      <div class="nav-step-num">1</div>
+      <div class="nav-step-text">Едешь до остановки / паркуешься рядом с ул. Чуйкова 2А</div>
+    </div>
+    <div class="nav-step">
+      <div class="nav-step-num">2</div>
+      <div class="nav-step-text">Смотри на фото ниже — ориентируйся по ним</div>
+    </div>
+    <div class="nav-step">
+      <div class="nav-step-num">3</div>
+      <div class="nav-step-text">Если потеряешься — напиши в Telegram, встретим 🙂</div>
+    </div>
+  </div>
+  <div class="carousel">
+    <div class="c-slide nav-slide"><img src="Как найти/photo_2026-03-11_12-55-53.jpg" alt="Как найти студию" loading="lazy"></div>
+    <div class="c-slide nav-slide"><img src="Как найти/photo_2026-03-11_12-57-15.jpg" alt="Как найти студию" loading="lazy"></div>
+  </div>
+  <a href="https://t.me/tourttty" target="_blank" rel="noopener noreferrer" class="btn-grad" style="margin-top:16px">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+    Написать в Telegram
+  </a>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════ -->
+<div class="sep"></div>
+<footer class="footer">
+  <div class="footer-logo">Maaybe Lash</div>
+  <div class="footer-sub">Наращивание ресниц · Казань</div>
+  <div class="footer-row">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.18h3a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.82a16 16 0 006.29 6.29l.95-.95a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    <a href="tel:+79872510266" style="color:rgba(255,255,255,.75);text-decoration:none">+7 (987) 251-02-66</a>
+  </div>
+  <div class="footer-row">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    Казань, ул. Чуйкова 2А
+  </div>
+  <div class="footer-row">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    Пн–Вс: 9:00 – 21:00
+  </div>
+  <div class="footer-copy">© 2026 Maaybe Lash · Казань · Ильнара Магадеева</div>
+</footer>
+
+<div class="bottom-spacer"></div>
+
+<!-- ══ BOTTOM NAV ════════════════════════ -->
+<nav class="bottom-nav">
+  <a href="https://t.me/tourttty" target="_blank" rel="noopener noreferrer" class="nav-item">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+    Telegram
+  </a>
+  <a href="https://max.ru/u/f9LHodD0cOKUH4Y4M5BEUObWbuNbG3Q5dssspVFIgyxtriH-PaD_sNgqJ8Y" target="_blank" rel="noopener noreferrer" class="nav-item nav-max">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+    MAX
+  </a>
+  <a href="https://t.me/tourttty" target="_blank" rel="noopener noreferrer" class="nav-item center-nav">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Запись
+  </a>
+  <a href="https://www.instagram.com/maaybe.lash" target="_blank" rel="noopener noreferrer" class="nav-item">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    Instagram
+  </a>
+  <a href="#contacts" class="nav-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    Контакты
+  </a>
+</nav>
+
+<!-- ══ ЛАЙТБОКС ════════════════════════════ -->
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+  <button class="lb-close" id="lbClose" aria-label="Закрыть">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="lb-counter" id="lbCounter"></div>
+  <div class="lb-content">
+    <button class="lb-arr lb-arr-l" id="lbPrev" aria-label="Назад">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div style="overflow:hidden;width:100%;height:100%">
+      <div class="lb-track" id="lbTrack"></div>
+    </div>
+    <button class="lb-arr lb-arr-r" id="lbNext" aria-label="Далее">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+  <div class="lb-hint">← свайп → следующее &nbsp;|&nbsp; ↓ закрыть</div>
+</div>
+
+<script>
+// ══ ДАННЫЕ ════════════════════════════════
+const WORK_PHOTOS = [
+  'Мои работы/photo_1_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_2_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_3_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_5_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_6_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_8_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_9_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_10_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_13_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_14_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_15_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_16_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_18_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_19_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_20_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_21_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_22_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_23_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_24_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_27_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_28_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_30_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_31_2026-05-05_23-39-36.jpg',
+  'Мои работы/photo_35_2026-05-05_23-39-36.jpg'
+];
+
+const WORK_VIDEOS = [
+  'Видео мои работы/AQM9cN4XE9DzIflB9l2Q1vuapLDyVTYuJDmPd4u_TiHRYWr3PLLr0o8qFqgDPL9.mp4',
+  'Видео мои работы/AQMAIGviYhCbO0HtCbYTVeGQek7Rena4d7wwGGyJt18ZoxcZQOPog82zNH8Z9sUOLEo5H.mp4',
+  'Видео мои работы/AQMRXDJzQtbFtDnAkNO6SxC7x8GkxBN1jx0CZ_NrSuuKUYUXw1BGEv_3PoECOlE.mp4',
+  'Видео мои работы/AQMWaVBbvIypms_59l_NAGumE2ZwCxxdnylPJlOTwD2w4sxbSMrC1gnB9pG2oHi.mp4',
+  'Видео мои работы/AQMdzqg1rfHIYFyUB63ENZ_OBSUQq0qcskY4ZpOikCKZiw7gi5WaJGIQPiYOodW2kLyqS.mp4',
+  'Видео мои работы/AQNg9MQQajz7iMHP4CXiO_a_KB05equ1bfUksryxuVlYeGsIA5JFaOvPM40sqhqqu.mp4',
+  'Видео мои работы/AQNt4cMZ3wLiohvJh16Eisy_uhsQQKOhAg6XmDowikypHWzQBr1HkVfXJMWj6UT.mp4',
+  'Видео мои работы/AQOEN_zwtfGxTb_kYjy6PEiVPIIWArgsFfovvpIvPi6PKHKzvRoQLuifhJiTNwP.mp4',
+  'Видео мои работы/AQOIccF6jP_F_fzupJTE5S5trwkmHYdz7qWYBlFnYMBYC_yXyB9e8u7Ag0xpHor.mp4',
+  'Видео мои работы/AQOj_gCJBWqCxXvKsbQfyIuhKrbmlZ44dimGzQv_GHKJuHOrcWF6nyM1aZSe_c6.mp4',
+  'Видео мои работы/AQOpZPa4T6KWPVDIxSHdixkBgq1xLx7Z818m59bF3tCFXkF_mibGbmtllmy6oDKYQuIuFO4A7o.mp4',
+  'Видео мои работы/AQPYF_VB_PvNwgOWSen6jqDM37ioytTbd16btISe9qxhMcKpDE_NerKQSeJ8iH9pKYomSMIhVSS.mp4',
+  'Видео мои работы/AQPlfxi6RDbTBapRSTmyhVZzMR_X3aQgMWA5G68D1kk1Jl9rv9BqpS9LbaMQVlf.mp4',
+  'Видео мои работы/AQPmxWjNkmTUxlyY3_ssLFJ6Sgr3RcJrLeund12zkFp05_KzG6ZsOeZqSc_zxZo.mp4'
+];
+
+// ══ HERO VIDEO SLIDER ═════════════════════
+let hvsIdx = 0;
+const hvsVids = [
+  document.getElementById('hv0'),
+  document.getElementById('hv1'),
+  document.getElementById('hv2')
+];
+const hvsTrack = document.getElementById('hvsTrack');
+const hvsDotEls = document.querySelectorAll('.hvs-dot');
+
+function hvsGo(idx) {
+  hvsVids[hvsIdx].pause();
+  hvsIdx = (idx + hvsVids.length) % hvsVids.length;
+  hvsTrack.style.transform = 'translateX(-' + (hvsIdx * 100) + '%)';
+  hvsDotEls.forEach((d, i) => d.classList.toggle('active', i === hvsIdx));
+  const v = hvsVids[hvsIdx];
+  v.currentTime = 0;
+  v.play().catch(() => {});
+}
+
+// Touch swipe for hero
+(function() {
+  const el = document.getElementById('heroSlider');
+  let sx = 0, sy = 0;
+  el.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, {passive:true});
+  el.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - sx;
+    const dy = Math.abs(e.changedTouches[0].clientY - sy);
+    if (Math.abs(dx) > 40 && dy < 60) hvsGo(dx < 0 ? hvsIdx + 1 : hvsIdx - 1);
+  }, {passive:true});
+})();
+
+// Auto-advance hero every 6s
+setInterval(() => hvsGo(hvsIdx + 1), 6000);
+
+// ══ WORKS CAROUSEL (3 видно, свайп) ══════
+(function() {
+  const car = document.getElementById('worksCar');
+  const lbItems = WORK_PHOTOS.map(s => ({type:'photo', src:s}));
+  WORK_PHOTOS.forEach((src, i) => {
+    const d = document.createElement('div');
+    d.className = 'wc-item';
+    d.innerHTML = '<img src="' + encodePath(src) + '" alt="Работа ' + (i+1) + '" loading="lazy">';
+    d.onclick = () => openLB(lbItems, i);
+    car.appendChild(d);
+  });
+})();
+
+// ══ VIDEO CAROUSEL (одно на экране) ══════
+(function() {
+  const track = document.getElementById('vidCarTrack');
+  const dotsEl = document.getElementById('vidCarDots');
+  const counter = document.getElementById('vidCarCounter');
+  const wrap = document.getElementById('vidCarWrap');
+  const total = WORK_VIDEOS.length;
+  let cur = 0, startX = 0, startY = 0, isDragging = false;
+  let curVideo = null;
+
+  WORK_VIDEOS.forEach((src, i) => {
+    const slide = document.createElement('div');
+    slide.className = 'vid-car-slide';
+    const vid = document.createElement('video');
+    vid.src = encodePath(src);
+    vid.muted = true;
+    vid.loop = true;
+    vid.playsinline = true;
+    vid.setAttribute('playsinline', '');
+    vid.preload = i < 3 ? 'auto' : 'none';
+    const ov = document.createElement('div');
+    ov.className = 'vid-car-ov';
+    ov.innerHTML = '<div class="play-circle"><svg width="28" height="28" viewBox="0 0 24 24" fill="#E91E8C"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>';
+    ov.onclick = (e) => {
+      e.stopPropagation();
+      if (vid.paused) { vid.play().catch(()=>{}); ov.classList.add('hidden'); }
+      else { vid.pause(); ov.classList.remove('hidden'); }
+    };
+    slide.appendChild(vid);
+    slide.appendChild(ov);
+    slide.onclick = () => openLB(WORK_VIDEOS.map(s => ({type:'video',src:s})), i);
+    track.appendChild(slide);
+
+    const dot = document.createElement('button');
+    dot.className = 'vid-car-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goTo(i);
+    dotsEl.appendChild(dot);
+  });
+
+
+  // Auto-load + play videos as they scroll into view
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(ent => {
+        const vid = ent.target.querySelector('video');
+        if (!vid) return;
+        if (ent.isIntersecting) {
+          if (vid.preload === 'none' || vid.readyState === 0) {
+            vid.preload = 'auto';
+            vid.load();
+          }
+          vid.play().catch(() => {});
+          const ov = ent.target.querySelector('.vid-car-ov');
+          if (ov) ov.classList.add('hidden');
+        } else {
+          vid.pause();
+          const ov = ent.target.querySelector('.vid-car-ov');
+          if (ov) ov.classList.remove('hidden');
+        }
+      });
+    }, {root: wrap, threshold: 0.4});
+    track.querySelectorAll('.vid-car-slide').forEach(s => io.observe(s));
+  }
+  function goTo(idx) {
+    if (curVideo) { curVideo.pause(); }
+    cur = Math.max(0, Math.min(idx, total - 1));
+    track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+    dotsEl.querySelectorAll('.vid-car-dot').forEach((d, i) => d.classList.toggle('active', i === cur));
+    counter.textContent = (cur + 1) + ' / ' + total;
+    const slides = track.querySelectorAll('.vid-car-slide');
+    curVideo = slides[cur].querySelector('video');
+    slides[cur].querySelector('.vid-car-ov').classList.remove('hidden');
+    // autoplay current
+    curVideo.currentTime = 0;
+    curVideo.play().catch(() => {});
+    slides[cur].querySelector('.vid-car-ov').classList.add('hidden');
+  }
+
+  wrap.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    isDragging = true;
+  }, {passive: true});
+  wrap.addEventListener('touchend', e => {
+    if (!isDragging) return;
+    isDragging = false;
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = Math.abs(e.changedTouches[0].clientY - startY);
+    if (Math.abs(dx) > 40 && dy < 80) goTo(dx < 0 ? cur + 1 : cur - 1);
+  }, {passive: true});
+
+  counter.textContent = '1 / ' + total;
+  // start first video
+  setTimeout(() => {
+    const firstVid = track.querySelector('video');
+    if (firstVid) {
+      firstVid.play().catch(() => {});
+      track.querySelector('.vid-car-ov').classList.add('hidden');
+      curVideo = firstVid;
+    }
+  }, 500);
+})();
+
+function scrollCar(el, dir) {
+  const w = el.offsetWidth;
+  el.scrollBy({left: dir * w, behavior: 'smooth'});
+}
+
+function encodePath(p) {
+  return p.split('/').map(s => encodeURIComponent(s)).join('/');
+}
+
+// ══ ЛАЙТБОКС ════════════════════════════
+let lb = { items: [], idx: 0, startX: 0, startY: 0 };
+const lbEl = document.getElementById('lb');
+const lbTrack = document.getElementById('lbTrack');
+const lbCounter = document.getElementById('lbCounter');
+
+function openLB(items, idx) {
+  lb.items = items;
+  lb.idx = idx;
+  lbTrack.innerHTML = '';
+  items.forEach(item => {
+    const slide = document.createElement('div');
+    slide.className = 'lb-slide';
+    if (item.type === 'photo') {
+      const img = document.createElement('img');
+      img.src = encodePath(item.src);
+      img.alt = 'Работа';
+      slide.appendChild(img);
+    } else {
+      const vid = document.createElement('video');
+      vid.src = encodePath(item.src);
+      vid.controls = true;
+      vid.playsinline = true;
+      vid.muted = false;
+      vid.loop = true;
+      slide.appendChild(vid);
+    }
+    lbTrack.appendChild(slide);
+  });
+  lbEl.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  lbMoveTo(idx, false);
+}
+
+function lbMoveTo(idx, animate) {
+  lb.idx = Math.max(0, Math.min(idx, lb.items.length - 1));
+  lbTrack.style.transition = animate ? 'transform .32s cubic-bezier(.25,.46,.45,.94)' : 'none';
+  lbTrack.style.transform = 'translateX(-' + (lb.idx * 100) + '%)';
+  lbCounter.textContent = (lb.idx + 1) + ' / ' + lb.items.length;
+  // autoplay current video
+  lbTrack.querySelectorAll('video').forEach((v, i) => {
+    if (i === lb.idx) { v.currentTime = 0; v.play().catch(() => {}); }
+    else v.pause();
+  });
+}
+
+function closeLB() {
+  lbEl.classList.remove('active');
+  document.body.style.overflow = '';
+  lbTrack.querySelectorAll('video').forEach(v => v.pause());
+}
+
+document.getElementById('lbClose').onclick = closeLB;
+document.getElementById('lbPrev').onclick = () => lbMoveTo(lb.idx - 1, true);
+document.getElementById('lbNext').onclick = () => lbMoveTo(lb.idx + 1, true);
+
+// Touch swipe for lightbox
+lbEl.addEventListener('touchstart', e => {
+  lb.startX = e.touches[0].clientX;
+  lb.startY = e.touches[0].clientY;
+}, {passive: true});
+lbEl.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - lb.startX;
+  const dy = e.changedTouches[0].clientY - lb.startY;
+  if (Math.abs(dy) > Math.abs(dx) && dy > 70) { closeLB(); return; }
+  if (Math.abs(dx) > 40 && Math.abs(dy) < 80) {
+    lbMoveTo(dx < 0 ? lb.idx + 1 : lb.idx - 1, true);
+  }
+}, {passive: true});
+
+// Close on backdrop tap
+lbEl.addEventListener('click', e => { if (e.target === lbEl) closeLB(); });
+
+// Keyboard
+document.addEventListener('keydown', e => {
+  if (!lbEl.classList.contains('active')) return;
+  if (e.key === 'Escape') closeLB();
+  if (e.key === 'ArrowRight') lbMoveTo(lb.idx + 1, true);
+  if (e.key === 'ArrowLeft') lbMoveTo(lb.idx - 1, true);
+});
+
+// ══ REVIEW CAROUSEL ══════════════════════
+(function() {
+  const track = document.getElementById('revTrack');
+  const dotsEl = document.getElementById('revDots');
+  const items = track.querySelectorAll('.rev-carousel-item');
+  const total = items.length;
+  let cur = 0;
+  let startX = 0, startY = 0;
+
+  function goTo(idx) {
+    cur = (idx + total) % total;
+    track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+    dotsEl.querySelectorAll('.rev-dot').forEach((d, i) => d.classList.toggle('active', i === cur));
+  }
+
+  // Build dots
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('span');
+    dot.className = 'rev-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goTo(i);
+    dotsEl.appendChild(dot);
+  }
+
+  const wrap = document.getElementById('revWrap');
+  wrap.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, {passive: true});
+  wrap.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = Math.abs(e.changedTouches[0].clientY - startY);
+    if (Math.abs(dx) > 40 && dy < 60) goTo(dx < 0 ? cur + 1 : cur - 1);
+  }, {passive: true});
+})();
+
+// ══ QUIZ ════════════════════════════════
+function showQuiz() {
+  document.getElementById('quizTrigger').style.display = 'none';
+  document.getElementById('quizBody').classList.add('visible');
+}
+
+const qAnswers = {};
+const RESULTS = [
+  {name:'Классика', price:'2 000 ₽', desc:'Одна ресница на каждую натуральную — естественный выразительный взгляд. Идеально для первой процедуры и ценителей природного образа.'},
+  {name:'Объём 2D/3D', price:'2 200–2 400 ₽', desc:'Лёгкие пучки из 2–3 ресниц — голливудский результат без туши. Глаза выглядят ярко и выразительно 24/7.'},
+  {name:'Уголки', price:'1 500 ₽', desc:'Акцент на внешних уголках — эффект кошачьего взгляда. Выразительно, быстро и по отличной цене.'},
+];
+
+function quizAnswer(step, val) {
+  qAnswers[step] = val;
+  document.getElementById('qs' + step).classList.remove('active');
+  document.getElementById('qBar').style.width = (step / 3 * 100) + '%';
+  if (step < 3) {
+    document.getElementById('qs' + (step + 1)).classList.add('active');
+  } else {
+    document.getElementById('qBar').style.width = '100%';
+    let idx = 0;
+    if (qAnswers[1] === 2) idx = 1;
+    else if (qAnswers[1] === 3) idx = 2;
+    const r = RESULTS[idx];
+    document.getElementById('qResName').textContent = r.name;
+    document.getElementById('qResPrice').textContent = r.price;
+    document.getElementById('qResDesc').textContent = r.desc;
+    document.getElementById('qResult').classList.add('active');
+  }
+}
+
+function quizReset() {
+  Object.keys(qAnswers).forEach(k => delete qAnswers[k]);
+  document.getElementById('qResult').classList.remove('active');
+  document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('qs1').classList.add('active');
+  document.getElementById('qBar').style.width = '33%';
+  // скрыть квиз, показать кнопку-колесо
+  document.getElementById('quizBody').classList.remove('visible');
+  document.getElementById('quizTrigger').style.display = '';
+}
+
+// ══ PRICE ACCORDION ══════════════════════
+function togglePrice(row) {
+  const d = row.nextElementSibling, open = d.classList.contains('open');
+  document.querySelectorAll('.pr-detail.open').forEach(x => {
+    x.classList.remove('open'); x.previousElementSibling.classList.remove('open-row');
+  });
+  if (!open) { d.classList.add('open'); row.classList.add('open-row'); }
+}
+
+// ══ FAQ ══════════════════════════════════
+function toggleFaq(item) {
+  const open = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(x => x.classList.remove('open'));
+  if (!open) item.classList.add('open');
+}
+
+// ══ SLOTS ════════════════════════════════
+(function() {
+  const grid = document.getElementById('slotsGrid');
+  const times = ['10:00','12:00','14:00','16:00','18:00'];
+  const days = ['Пн','Вт','Ср','Чт','Пт','Сб','Вс'];
+  const now = new Date();
+  const slots = [];
+  for (let d = 1; d <= 5; d++) {
+    const dt = new Date(now); dt.setDate(now.getDate() + d);
+    const dayName = days[dt.getDay() === 0 ? 6 : dt.getDay() - 1];
+    const t = times[Math.floor(Math.random() * times.length)];
+    if (slots.length < 4) slots.push({ day: dayName, time: t, free: true });
+  }
+  const dtB = new Date(now); dtB.setDate(now.getDate() + 1);
+  const dB = days[dtB.getDay() === 0 ? 6 : dtB.getDay() - 1];
+  slots.splice(1, 0, { day: dB, time: '11:00', free: false });
+  slots.slice(0, 4).forEach(s => {
+    grid.innerHTML += '<div class="slot' + (s.free ? '' : ' slot-busy') + '">'
+      + '<div class="slot-day">' + s.day + '</div>'
+      + '<div class="slot-time">' + s.time + '</div>'
+      + '<div class="slot-status">' + (s.free ? '✓ Свободно' : '✗ Занято') + '</div>'
+      + '</div>';
+  });
+})();
+
+// ══ VOICE REVIEWS ════════════════════════
+const REVIEWS = [
+  'Ильнара — настоящий мастер своего дела! Ходила к ней уже 4 раза, каждый раз результат лучше предыдущего. Ресницы держатся больше месяца! Всем подругам посоветовала. Цены очень адекватные по Казани — за такое качество просто отличная цена.',
+  'Первый раз делала наращивание именно здесь, и теперь не понимаю, зачем раньше платила больше за худший результат. Ильнара всё объяснила, подобрала форму под мои глаза. Выгляжу как блогер из инстаграм, хотя просто проснулась! Теперь хожу каждые 3 недели.',
+  'Ресницы держатся уже 5 недель — просто фантастика. Студия уютная, мастер очень профессиональная. Делает аккуратно, быстро и с душой. Цены честные, переплачивать не приходится. Сначала думала попробовать один раз, а стала постоянной клиенткой уже 5 месяцев назад!'
+];
+const timers = [null, null, null], playing = [false, false, false];
+
+function voicePlay(btn, idx) {
+  const el = document.getElementById('vt' + idx);
+  if (playing[idx]) {
+    clearInterval(timers[idx]); playing[idx] = false;
+    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Продолжить';
+    return;
+  }
+  playing[idx] = true;
+  btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg> Пауза';
+  el.classList.add('visible');
+  const full = REVIEWS[idx];
+  let pos = el.textContent.length;
+  timers[idx] = setInterval(() => {
+    if (pos >= full.length) {
+      clearInterval(timers[idx]); playing[idx] = false;
+      el.textContent = full;
+      btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Прочитать снова';
+      btn.onclick = () => { el.textContent = ''; pos = 0; playing[idx] = false;
+        btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Воспроизвести отзыв';
+        btn.onclick = () => voicePlay(btn, idx); };
+      return;
+    }
+    el.textContent = full.slice(0, pos + 1); pos++;
+  }, 26);
+}
+</script>
+</body>
+</html>

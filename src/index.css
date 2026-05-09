@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0A0A0A;
+    color: #F5F5F5;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0A0A0A;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #C8A96E44;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C8A96E;
+  }
+}
+
+@layer components {
+  .gold-text {
+    background: linear-gradient(135deg, #A8894E 0%, #E8C98E 50%, #C8A96E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(200, 169, 110, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(200, 169, 110, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 40px rgba(200, 169, 110, 0.15);
+  }
+
+  .input-dark {
+    @apply w-full bg-[#1A1A1A] border border-[#2A2A2A] rounded-xl px-4 py-3 text-white placeholder-gray-600 text-sm transition-colors;
+    outline: none;
+  }
+  .input-dark:focus {
+    border-color: rgba(200, 169, 110, 0.5);
+  }
+
+  .btn-gold {
+    @apply px-6 py-3 bg-[#C8A96E] text-[#0A0A0A] rounded-full font-semibold text-sm transition-all duration-200;
+  }
+  .btn-gold:hover {
+    @apply bg-[#E8C98E] scale-105;
+    box-shadow: 0 8px 24px rgba(200, 169, 110, 0.3);
+  }
+
+  .btn-outline-gold {
+    @apply px-6 py-3 border border-[#C8A96E]/30 text-[#C8A96E] rounded-full text-sm font-medium transition-all duration-200;
+  }
+  .btn-outline-gold:hover {
+    @apply bg-[#C8A96E]/10 border-[#C8A96E]/60;
+  }
+
+  .card-dark {
+    @apply bg-[#141414] border border-[#2A2A2A] rounded-2xl transition-all duration-300;
+  }
+  .card-dark:hover {
+    border-color: rgba(200, 169, 110, 0.25);
+  }
+
+  .section-label {
+    @apply text-[#C8A96E] text-xs uppercase tracking-[0.35em] font-medium;
+  }
+
+  .section-title {
+    @apply font-serif text-4xl sm:text-5xl text-white leading-tight;
+  }
+}
