@@ -9,6 +9,10 @@
   <meta property="og:description" content="Блог мастера Ильнары Магадеевой — честно о наращивании ресниц, LED-технологии, уходе и материалах.">
   <meta property="og:image" content="/blog/banner.png">
   <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon/icon-512.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
@@ -66,36 +70,8 @@ body{
 }
 
 /* ── BLOG HERO ─────────────────────────── */
-.blog-hero{
-  position:relative;overflow:hidden;
-  background:linear-gradient(160deg,#FFB3D4 0%,#E91E8C 52%,#9333EA 100%);
-}
-.blog-hero img{
-  width:100%;display:block;
-  max-height:260px;object-fit:cover;object-position:center top;
-  opacity:.85;
-}
-.blog-hero-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(to bottom,rgba(233,30,140,.15) 0%,rgba(45,27,61,.55) 100%);
-}
-.blog-hero-content{
-  position:absolute;bottom:0;left:0;right:0;
-  padding:20px 20px 24px;
-}
-.blog-hero-tag{
-  display:inline-flex;align-items:center;gap:6px;
-  background:rgba(255,255,255,.22);backdrop-filter:blur(8px);
-  color:#fff;font-size:12px;font-weight:800;
-  padding:5px 14px;border-radius:50px;margin-bottom:8px;
-  letter-spacing:.5px;
-}
-.blog-hero-title{
-  font-size:22px;font-weight:800;color:#fff;line-height:1.25;
-}
-.blog-hero-sub{
-  font-size:13px;color:rgba(255,255,255,.85);margin-top:6px;
-}
+.blog-hero{line-height:0}
+.blog-hero img{width:100%;display:block;height:auto}
 
 /* ── SECTIONS ───────────────────────────── */
 .sec{padding:28px 20px}
@@ -200,8 +176,6 @@ body{
 
 /* ── DESKTOP CARDS ──────────────────────── */
 @media(min-width:769px){
-  .blog-hero img{max-height:380px}
-  .blog-hero-title{font-size:32px}
   .sec{padding:40px}
   .cards-grid{grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto}
   .card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(233,30,140,.2)}
@@ -227,15 +201,9 @@ body{
 </header>
 
 <!-- ── BLOG HERO ────────────────────────── -->
-<section class="blog-hero">
+<div class="blog-hero">
   <img src="/blog/banner.png" alt="Заметки мастера — Maaybe Lash">
-  <div class="blog-hero-overlay"></div>
-  <div class="blog-hero-content">
-    <div class="blog-hero-tag">✍️ Заметки мастера</div>
-    <div class="blog-hero-title">Честно о ресницах</div>
-    <div class="blog-hero-sub">Пишу о том, что важно знать до и после процедуры</div>
-  </div>
-</section>
+</div>
 
 <!-- ── СТАТЬИ ───────────────────────────── -->
 <section class="sec sec-light">
@@ -244,7 +212,7 @@ body{
 
     <!-- Статья 1 -->
     <a href="/blog/led-naraschivanie.html" class="card">
-      <img src="/blog/cover.png" alt="LED-наращивание ресниц" class="card-img" loading="lazy">
+      <img src="/blog/cover-1.png" alt="LED-наращивание ресниц" class="card-img" loading="lazy">
       <div class="card-body">
         <div class="card-cat">Заметки мастера</div>
         <div class="card-title">Почему я перехожу на LED-наращивание ресниц</div>
@@ -258,7 +226,7 @@ body{
 
     <!-- Статья 2 -->
     <a href="/blog/uhod-posle-naraschivaniya.html" class="card">
-      <img src="/blog/cover.png" alt="Уход за ресницами после наращивания" class="card-img" loading="lazy">
+      <img src="/blog/cover-2.png" alt="Уход за ресницами после наращивания" class="card-img" loading="lazy">
       <div class="card-body">
         <div class="card-cat">Заметки мастера</div>
         <div class="card-title">Уход за ресницами: что важно знать после наращивания</div>
@@ -272,7 +240,7 @@ body{
 
     <!-- Статья 3 -->
     <a href="/blog/krasnye-glaza.html" class="card">
-      <img src="/blog/cover.png" alt="Красные глаза после наращивания ресниц" class="card-img" loading="lazy">
+      <img src="/blog/cover-3.png" alt="Красные глаза после наращивания ресниц" class="card-img" loading="lazy">
       <div class="card-body">
         <div class="card-cat">Заметки мастера</div>
         <div class="card-title">Почему после наращивания бывают красные глаза</div>
@@ -286,7 +254,7 @@ body{
 
     <!-- Статья 4 -->
     <a href="/blog/materialy.html" class="card">
-      <img src="/blog/cover.png" alt="Материалы для наращивания ресниц" class="card-img" loading="lazy">
+      <img src="/blog/cover-4.png" alt="Материалы для наращивания ресниц" class="card-img" loading="lazy">
       <div class="card-body">
         <div class="card-cat">Заметки мастера</div>
         <div class="card-title">Какие материалы я использую и почему это важно</div>
