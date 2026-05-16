@@ -69,9 +69,24 @@ body{
   .bottom-spacer{display:none}
 }
 
-/* ── BLOG HERO ─────────────────────────── */
-.blog-hero{line-height:0}
-.blog-hero img{width:100%;display:block;height:auto}
+/* ── BLOG INTRO ─────────────────────────── */
+.blog-intro{
+  padding:36px 24px 28px;
+  background:#fff;
+  border-bottom:1px solid rgba(233,30,140,.09);
+}
+.blog-intro-label{
+  font-size:11px;font-weight:800;letter-spacing:1.2px;
+  text-transform:uppercase;color:var(--pk);margin-bottom:10px;
+}
+.blog-intro-title{
+  font-size:26px;font-weight:800;color:var(--txt);
+  line-height:1.25;margin-bottom:14px;
+}
+.blog-intro-text{
+  font-size:14px;color:var(--txl);line-height:1.7;
+}
+.blog-intro-text p+p{margin-top:8px}
 
 /* ── SECTIONS ───────────────────────────── */
 .sec{padding:28px 20px}
@@ -176,6 +191,9 @@ body{
 
 /* ── DESKTOP CARDS ──────────────────────── */
 @media(min-width:769px){
+  .blog-intro{padding:48px 40px 36px;max-width:760px}
+  .blog-intro-title{font-size:32px}
+  .blog-intro-text{font-size:15px}
   .sec{padding:40px}
   .cards-grid{grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto}
   .card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(233,30,140,.2)}
@@ -200,9 +218,14 @@ body{
   </div>
 </header>
 
-<!-- ── BLOG HERO ────────────────────────── -->
-<div class="blog-hero">
-  <img src="/blog/banner.png" alt="Заметки мастера — Maaybe Lash">
+<!-- ── BLOG INTRO ────────────────────────── -->
+<div class="blog-intro">
+  <div class="blog-intro-label">Заметки мастера</div>
+  <div class="blog-intro-title">Пишу о ресницах честно и без лишних слов</div>
+  <div class="blog-intro-text">
+    <p>О наращивании ресниц, комфорте глаз и уходе — простым и понятным языком.</p>
+    <p>Честные ответы на частые вопросы, разборы реальных ситуаций и рекомендации после процедуры.</p>
+  </div>
 </div>
 
 <!-- ── СТАТЬИ ───────────────────────────── -->
