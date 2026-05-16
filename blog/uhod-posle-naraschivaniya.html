@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -65,7 +65,8 @@ body{
 .btn-grad{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,var(--pk),var(--pur));color:#fff;font-family:inherit;font-size:16px;font-weight:800;padding:16px 24px;border-radius:50px;text-decoration:none;-webkit-tap-highlight-color:transparent;animation:btnBreathe 2.6s ease-in-out infinite}
 .btn-grad:active{transform:scale(.96)!important;animation:none}
 @keyframes btnBreathe{0%,100%{box-shadow:0 6px 22px rgba(233,30,140,.38);transform:scale(1)}50%{box-shadow:0 8px 34px rgba(233,30,140,.65),0 0 0 7px rgba(233,30,140,.13);transform:scale(1.025)}}
-.footer{background:linear-gradient(160deg,#2D1B3D,#1A0A2E);padding:32px 20px 20px;color:#fff}
+.footer{background:linear-gradient(160deg,#2D1B3D,#1A0A2E);color:#fff}
+.footer-inner{padding:32px 20px 20px}
 .footer-logo{font-family:'Dancing Script',cursive;font-size:32px;margin-bottom:6px}
 .footer-sub{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:20px;letter-spacing:2px;text-transform:uppercase}
 .footer-row{display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,.75);margin-bottom:9px}
@@ -79,12 +80,19 @@ body{
 @keyframes navPulse{0%,100%{box-shadow:0 0 0 0 rgba(233,30,140,0);transform:scale(1)}50%{box-shadow:0 -4px 20px rgba(233,30,140,.55),0 0 0 5px rgba(233,30,140,.18);transform:scale(1.06)}}
 .nav-item.active-nav{color:var(--pk)}
 @media(min-width:769px){
-  .art-title{font-size:30px}
-  .art-body{font-size:16px;max-width:740px;margin:0 auto;padding:0 40px 40px}
-  .art-header{max-width:740px;margin:0 auto;padding:20px 40px 16px}
-  .art-back{padding:20px 40px 0;max-width:740px;margin:0 auto;display:flex}
-  .art-cta{max-width:740px;margin:0 auto 20px;padding:24px 40px}
-  .art-cover{border-radius:0}
+  /* Hero image — ограничиваем высоту */
+  .art-cover{border-radius:0;max-height:480px;object-fit:cover;object-position:center}
+
+  /* Центральная колонка шире */
+  .art-back{padding:28px 60px 0;max-width:900px;margin:0 auto;display:flex}
+  .art-header{max-width:900px;margin:0 auto;padding:20px 60px 18px}
+  .art-title{font-size:36px;line-height:1.15}
+  .art-body{font-size:17px;line-height:1.8;max-width:900px;margin:0 auto;padding:0 60px 48px}
+  .art-cta{max-width:900px;margin:0 auto 20px;padding:28px 60px}
+
+  /* Footer */
+  .footer{padding:0}
+  .footer-inner{max-width:1160px;margin:0 auto;padding:40px 60px 28px}
 }
 </style>
 </head>
@@ -165,17 +173,19 @@ body{
 <div class="sep" style="margin-top:28px"></div>
 
 <footer class="footer">
-  <div class="footer-logo">Maaybe Lash</div>
-  <div class="footer-sub">Наращивание ресниц · Казань</div>
-  <div class="footer-row">
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.18h3a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.82a16 16 0 006.29 6.29l.95-.95a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-    <a href="tel:+79872510266">+7 (987) 251-02-66</a>
+  <div class="footer-inner">
+    <div class="footer-logo">Maaybe Lash</div>
+    <div class="footer-sub">Наращивание ресниц · Казань</div>
+    <div class="footer-row">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.18h3a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.82a16 16 0 006.29 6.29l.95-.95a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      <a href="tel:+79872510266">+7 (987) 251-02-66</a>
+    </div>
+    <div class="footer-row">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Казань, ул. Чуйкова 2А
+    </div>
+    <div class="footer-copy">© 2026 Maaybe Lash · Казань · Ильнара Магадеева</div>
   </div>
-  <div class="footer-row">
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-    Казань, ул. Чуйкова 2А
-  </div>
-  <div class="footer-copy">© 2026 Maaybe Lash · Казань · Ильнара Магадеева</div>
 </footer>
 
 <div class="bottom-spacer"></div>

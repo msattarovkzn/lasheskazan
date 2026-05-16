@@ -71,29 +71,29 @@ body{
 
 /* ── BLOG INTRO ─────────────────────────── */
 .blog-intro{
-  padding:36px 24px 28px;
+  padding:22px 20px 18px;
   background:#fff;
   border-bottom:1px solid rgba(233,30,140,.09);
   width:100%;
 }
 .blog-intro-label{
   font-size:11px;font-weight:800;letter-spacing:1.2px;
-  text-transform:uppercase;color:var(--pk);margin-bottom:10px;
+  text-transform:uppercase;color:var(--pk);margin-bottom:6px;
 }
 .blog-intro-title{
-  font-size:26px;font-weight:800;color:var(--txt);
-  line-height:1.25;margin-bottom:14px;
+  font-size:20px;font-weight:800;color:var(--txt);
+  line-height:1.2;margin-bottom:8px;
 }
 .blog-intro-text{
-  font-size:14px;color:var(--txl);line-height:1.7;
+  font-size:13px;color:var(--txl);line-height:1.6;
 }
-.blog-intro-text p+p{margin-top:8px}
+.blog-intro-text p+p{margin-top:6px}
 
 /* ── SECTIONS ───────────────────────────── */
-.sec{padding:28px 20px}
+.sec{padding:20px 16px}
 .sec-white{background:#fff}
 .sec-light{background:#FFF0F7}
-.sec-title{font-size:20px;font-weight:800;color:var(--txt);margin-bottom:18px}
+.sec-title{font-size:18px;font-weight:800;color:var(--txt);margin-bottom:14px}
 .sep{height:1px;background:linear-gradient(90deg,transparent,rgba(233,30,140,.18),transparent)}
 
 /* ── ARTICLE CARDS ──────────────────────── */
@@ -159,10 +159,8 @@ body{
 }
 
 /* ── FOOTER ─────────────────────────────── */
-.footer{
-  background:linear-gradient(160deg,#2D1B3D,#1A0A2E);
-  padding:32px 20px 20px;color:#fff
-}
+.footer{background:linear-gradient(160deg,#2D1B3D,#1A0A2E);color:#fff}
+.footer-inner{padding:32px 20px 20px}
 .footer-logo{font-family:'Dancing Script',cursive;font-size:32px;margin-bottom:6px}
 .footer-sub{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:20px;
   letter-spacing:2px;text-transform:uppercase}
@@ -192,16 +190,24 @@ body{
 
 /* ── DESKTOP ────────────────────────────── */
 @media(min-width:769px){
-  /* Intro — белый фон на всю ширину, текст по центру */
-  .blog-intro{padding:56px 40px 44px}
-  .blog-intro-inner{max-width:680px;margin:0 auto}
-  .blog-intro-title{font-size:32px}
-  .blog-intro-text{font-size:15px}
+  /* Intro */
+  .blog-intro{padding:52px 0 40px}
+  .blog-intro-inner{max-width:1160px;margin:0 auto;padding:0 60px}
+  .blog-intro-title{font-size:44px;line-height:1.15;margin-bottom:16px}
+  .blog-intro-label{margin-bottom:12px;font-size:12px}
+  .blog-intro-text{font-size:16px;line-height:1.7;max-width:620px}
 
   /* Секция статей */
-  .sec{padding:40px;max-width:980px;margin:0 auto}
-  .cards-grid{grid-template-columns:1fr 1fr;gap:24px}
-  .card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(233,30,140,.2)}
+  .sec{padding:48px 60px;max-width:1280px;margin:0 auto}
+  .sec-title{font-size:22px;margin-bottom:20px}
+  .cards-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(233,30,140,.18)}
+  .card-title{font-size:18px}
+  .card-excerpt{font-size:14px}
+
+  /* Footer */
+  .footer{padding:0}
+  .footer-inner{max-width:1160px;margin:0 auto;padding:40px 60px 28px}
 }
 </style>
 </head>
@@ -303,21 +309,23 @@ body{
 
 <!-- ── FOOTER ───────────────────────────── -->
 <footer class="footer">
-  <div class="footer-logo">Maaybe Lash</div>
-  <div class="footer-sub">Наращивание ресниц · Казань</div>
-  <div class="footer-row">
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.18h3a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.82a16 16 0 006.29 6.29l.95-.95a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-    <a href="tel:+79872510266">+7 (987) 251-02-66</a>
+  <div class="footer-inner">
+    <div class="footer-logo">Maaybe Lash</div>
+    <div class="footer-sub">Наращивание ресниц · Казань</div>
+    <div class="footer-row">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.18h3a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.82a16 16 0 006.29 6.29l.95-.95a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      <a href="tel:+79872510266">+7 (987) 251-02-66</a>
+    </div>
+    <div class="footer-row">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Казань, ул. Чуйкова 2А
+    </div>
+    <div class="footer-row">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Пн–Вс: 9:00 – 21:00
+    </div>
+    <div class="footer-copy">© 2026 Maaybe Lash · Казань · Ильнара Магадеева</div>
   </div>
-  <div class="footer-row">
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-    Казань, ул. Чуйкова 2А
-  </div>
-  <div class="footer-row">
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-    Пн–Вс: 9:00 – 21:00
-  </div>
-  <div class="footer-copy">© 2026 Maaybe Lash · Казань · Ильнара Магадеева</div>
 </footer>
 
 <div class="bottom-spacer"></div>
