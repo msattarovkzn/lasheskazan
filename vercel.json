@@ -2,5 +2,12 @@
   "framework": null,
   "buildCommand": null,
   "outputDirectory": ".",
-  "installCommand": null
+  "installCommand": null,
+  "rewrites": [
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/blog/led-naraschivanie", "destination": "/blog/led-naraschivanie.html" },
+    { "source": "/blog/uhod-posle-naraschivaniya", "destination": "/blog/uhod-posle-naraschivaniya.html" },
+    { "source": "/blog/krasnye-glaza", "destination": "/blog/krasnye-glaza.html" },
+    { "source": "/blog/materialy", "destination": "/blog/materialy.html" }
+  ]
 }

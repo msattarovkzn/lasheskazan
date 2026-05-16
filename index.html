@@ -359,6 +359,24 @@ body{
 .sb-ch-title{font-size:16px;font-weight:800}
 .sb-ch-sub{font-size:12px;opacity:.85;margin-top:2px}
 
+/* ── BLOG BUTTON ───────────────────────── */
+.blog-sb{grid-column:span 2;display:flex;align-items:center;gap:14px;
+  padding:16px 20px;border-radius:var(--r);
+  background:linear-gradient(135deg,var(--pk),var(--pur));
+  color:#fff;text-decoration:none;-webkit-tap-highlight-color:transparent;
+  transition:transform .12s, box-shadow .12s;
+  animation:blogPulse 3s ease-in-out infinite;margin-top:0}
+.blog-sb:active{transform:scale(.98)}
+@keyframes blogPulse{
+  0%,100%{box-shadow:0 4px 16px rgba(233,30,140,.3);transform:scale(1)}
+  50%{box-shadow:0 6px 28px rgba(233,30,140,.65),0 0 0 8px rgba(233,30,140,.18);transform:scale(1.02)}
+}
+.blog-sb-icon{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.2);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px}
+.blog-sb-t{flex:1}
+.blog-sb-title{font-size:16px;font-weight:800}
+.blog-sb-sub{font-size:12px;opacity:.85;margin-top:2px}
+
 /* ── SLOTS ─────────────────────────────── */
 .slots-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
 .slot{background:var(--cbg);border-radius:12px;padding:14px 12px;
@@ -903,6 +921,7 @@ body{
         <span class="badge">Сертифицированный мастер</span>
       </div>
       <p class="about-text">За 6 лет практики сделала сотни процедур — клиентки становятся постоянными, потому что результат держится долго, а подход всегда индивидуальный. Постоянно обучается у ведущих специалистов.</p>
+      <a href="/blog.html" class="btn-grad" style="margin-top:18px">✍️ Заметки мастера</a>
     </div>
   </div>
 </section>
@@ -1052,6 +1071,14 @@ body{
       <div class="sb-ch-t">
         <div class="sb-ch-title">✨ Подписаться на канал</div>
         <div class="sb-ch-sub">Акции, новинки, работы мастера</div>
+      </div>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+    <a href="/blog.html" class="blog-sb">
+      <div class="blog-sb-icon">✍️</div>
+      <div class="blog-sb-t">
+        <div class="blog-sb-title">Заметки мастера</div>
+        <div class="blog-sb-sub">Честно о ресницах, уходе и LED</div>
       </div>
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
     </a>

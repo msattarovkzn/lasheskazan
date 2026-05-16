@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Заметки мастера — Maaybe Lash · Казань</title>
+  <meta name="description" content="Блог мастера по наращиванию ресниц Ильнары Магадеевой — честно о LED-технологии, уходе за ресницами и материалах. Студия Maaybe Lash, Казань.">
+  <meta property="og:title" content="Заметки мастера — Maaybe Lash">
+  <meta property="og:description" content="Блог мастера Ильнары Магадеевой — честно о наращивании ресниц, LED-технологии, уходе и материалах.">
+  <meta property="og:image" content="/blog/banner.png">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --pk:#E91E8C;--pk2:#F472B6;--pk3:#FFD1E8;--pkd:#BE185D;
+  --pur:#9333EA;--tg:#229ED9;--max:#6B48FF;
+  --txt:#2D1B3D;--txl:#7C6A87;--cbg:rgba(255,255,255,.93);
+  --sh:0 4px 24px rgba(233,30,140,.13);--r:16px;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Nunito',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:#FFF0F7;color:var(--txt);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+@media(max-width:768px){body{max-width:480px;margin:0 auto}}
+
+/* ── DESKTOP HEADER ─────────────────────── */
+.desk-header{display:none}
+@media(min-width:769px){
+  body{max-width:100%;padding-bottom:0;background:linear-gradient(160deg,#FFF0F7 0%,#F5E6FF 100%)}
+  .desk-header{
+    display:block;position:sticky;top:0;z-index:1000;
+    background:rgba(255,255,255,.97);backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(233,30,140,.12);
+    box-shadow:0 2px 16px rgba(233,30,140,.08)
+  }
+  .desk-header-inner{
+    max-width:1200px;margin:0 auto;padding:0 40px;
+    display:flex;align-items:center;gap:32px;height:64px
+  }
+  .desk-logo{
+    font-family:'Dancing Script',cursive;font-size:28px;
+    background:linear-gradient(135deg,var(--pk),var(--pur));
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    background-clip:text;text-decoration:none
+  }
+  .desk-nav{display:flex;gap:24px;flex:1}
+  .desk-nav a{
+    color:var(--txl);text-decoration:none;font-size:14px;font-weight:700;
+    transition:color .2s
+  }
+  .desk-nav a:hover{color:var(--pk)}
+  .desk-nav a.active{color:var(--pk)}
+  .desk-book-btn{
+    background:linear-gradient(135deg,var(--pk),var(--pur));
+    color:#fff;text-decoration:none;padding:10px 22px;
+    border-radius:50px;font-size:14px;font-weight:800;white-space:nowrap
+  }
+  .bottom-nav{display:none}
+  .bottom-spacer{display:none}
+}
+
+/* ── BLOG HERO ─────────────────────────── */
+.blog-hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#FFB3D4 0%,#E91E8C 52%,#9333EA 100%);
+}
+.blog-hero img{
+  width:100%;display:block;
+  max-height:260px;object-fit:cover;object-position:center top;
+  opacity:.85;
+}
+.blog-hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(233,30,140,.15) 0%,rgba(45,27,61,.55) 100%);
+}
+.blog-hero-content{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:20px 20px 24px;
+}
+.blog-hero-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.22);backdrop-filter:blur(8px);
+  color:#fff;font-size:12px;font-weight:800;
+  padding:5px 14px;border-radius:50px;margin-bottom:8px;
+  letter-spacing:.5px;
+}
+.blog-hero-title{
+  font-size:22px;font-weight:800;color:#fff;line-height:1.25;
+}
+.blog-hero-sub{
+  font-size:13px;color:rgba(255,255,255,.85);margin-top:6px;
+}
+
+/* ── SECTIONS ───────────────────────────── */
+.sec{padding:28px 20px}
+.sec-white{background:#fff}
+.sec-light{background:#FFF0F7}
+.sec-title{font-size:20px;font-weight:800;color:var(--txt);margin-bottom:18px}
+.sep{height:1px;background:linear-gradient(90deg,transparent,rgba(233,30,140,.18),transparent)}
+
+/* ── ARTICLE CARDS ──────────────────────── */
+.cards-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+.card{
+  background:var(--cbg);border-radius:var(--r);
+  box-shadow:var(--sh);overflow:hidden;text-decoration:none;color:inherit;
+  display:flex;flex-direction:column;
+  -webkit-tap-highlight-color:transparent;
+  transition:transform .15s,box-shadow .15s;
+}
+.card:active{transform:scale(.98)}
+.card-img{
+  width:100%;aspect-ratio:16/9;
+  object-fit:cover;object-position:center;
+  display:block;
+}
+.card-body{padding:16px;flex:1;display:flex;flex-direction:column;gap:8px}
+.card-cat{
+  font-size:11px;font-weight:800;color:var(--pk);
+  letter-spacing:.6px;text-transform:uppercase;
+}
+.card-title{
+  font-size:16px;font-weight:800;color:var(--txt);line-height:1.35;
+}
+.card-excerpt{
+  font-size:13px;color:var(--txl);line-height:1.6;flex:1;
+}
+.card-meta{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-top:4px;
+}
+.card-date{font-size:11px;color:var(--txl)}
+.card-read{
+  font-size:13px;font-weight:800;color:var(--pk);
+  display:flex;align-items:center;gap:4px;
+}
+
+/* ── BACK LINK ──────────────────────────── */
+.back-link{
+  display:inline-flex;align-items:center;gap:6px;
+  color:var(--txl);text-decoration:none;
+  font-size:14px;font-weight:700;padding:8px 0;
+  -webkit-tap-highlight-color:transparent;
+}
+.back-link svg{flex-shrink:0}
+
+/* ── BUTTON ─────────────────────────────── */
+.btn-grad{display:flex;align-items:center;justify-content:center;gap:10px;
+  background:linear-gradient(135deg,var(--pk),var(--pur));color:#fff;
+  font-family:inherit;font-size:16px;font-weight:800;
+  padding:16px 24px;border-radius:50px;text-decoration:none;
+  -webkit-tap-highlight-color:transparent;
+  animation:btnBreathe 2.6s ease-in-out infinite}
+.btn-grad:active{transform:scale(.96)!important;animation:none}
+@keyframes btnBreathe{
+  0%,100%{box-shadow:0 6px 22px rgba(233,30,140,.38);transform:scale(1)}
+  50%{box-shadow:0 8px 34px rgba(233,30,140,.65),0 0 0 7px rgba(233,30,140,.13);transform:scale(1.025)}
+}
+
+/* ── FOOTER ─────────────────────────────── */
+.footer{
+  background:linear-gradient(160deg,#2D1B3D,#1A0A2E);
+  padding:32px 20px 20px;color:#fff
+}
+.footer-logo{font-family:'Dancing Script',cursive;font-size:32px;margin-bottom:6px}
+.footer-sub{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:20px;
+  letter-spacing:2px;text-transform:uppercase}
+.footer-row{display:flex;align-items:center;gap:10px;font-size:14px;
+  color:rgba(255,255,255,.75);margin-bottom:9px}
+.footer-row a{color:rgba(255,255,255,.75);text-decoration:none}
+.footer-copy{font-size:11px;color:rgba(255,255,255,.35);margin-top:24px;
+  padding-top:16px;border-top:1px solid rgba(255,255,255,.1);text-align:center}
+
+/* ── BOTTOM NAV ─────────────────────────── */
+.bottom-spacer{height:80px}
+.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:480px;background:#fff;
+  border-top:1px solid #FFE4F0;display:flex;align-items:stretch;
+  z-index:999;box-shadow:0 -4px 24px rgba(233,30,140,.14)}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:3px;padding:9px 4px 13px;text-decoration:none;
+  color:#B07AB0;font-size:10px;font-weight:700;-webkit-tap-highlight-color:transparent}
+.nav-item svg{width:22px;height:22px}
+.nav-item.center-nav{background:linear-gradient(160deg,var(--pk),var(--pur));color:#fff;
+  animation:navPulse 2.2s ease-in-out infinite}
+@keyframes navPulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(233,30,140,0);transform:scale(1)}
+  50%{box-shadow:0 -4px 20px rgba(233,30,140,.55),0 0 0 5px rgba(233,30,140,.18);transform:scale(1.06)}
+}
+.nav-item.active-nav{color:var(--pk)}
+
+/* ── DESKTOP CARDS ──────────────────────── */
+@media(min-width:769px){
+  .blog-hero img{max-height:380px}
+  .blog-hero-title{font-size:32px}
+  .sec{padding:40px}
+  .cards-grid{grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto}
+  .card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(233,30,140,.2)}
+}
+</style>
+</head>
+<body>
+
+<!-- ── DESKTOP HEADER ───────────────────── -->
+<header class="desk-header">
+  <div class="desk-header-inner">
+    <a href="/" class="desk-logo">Maaybe Lash ✨</a>
+    <nav class="desk-nav">
+      <a href="/#works">Работы</a>
+      <a href="/#price">Цены</a>
+      <a href="/#master">Мастер</a>
+      <a href="/#reviews">Отзывы</a>
+      <a href="/#map">Контакты</a>
+      <a href="/blog.html" class="active">Блог</a>
+    </nav>
+    <a href="https://t.me/tourttty" target="_blank" rel="noopener noreferrer" class="desk-book-btn">📅 Записаться</a>
+  </div>
+</header>
+
+<!-- ── BLOG HERO ────────────────────────── -->
+<section class="blog-hero">
+  <img src="/blog/banner.png" alt="Заметки мастера — Maaybe Lash">
+  <div class="blog-hero-overlay"></div>
+  <div class="blog-hero-content">
+    <div class="blog-hero-tag">✍️ Заметки мастера</div>
+    <div class="blog-hero-title">Честно о ресницах</div>
+    <div class="blog-hero-sub">Пишу о том, что важно знать до и после процедуры</div>
+  </div>
+</section>
+
+<!-- ── СТАТЬИ ───────────────────────────── -->
+<section class="sec sec-light">
+  <div class="sec-title">📝 Все статьи</div>
+  <div class="cards-grid">
+
+    <!-- Статья 1 -->
+    <a href="/blog/led-naraschivanie.html" class="card">
+      <img src="/blog/cover.png" alt="LED-наращивание ресниц" class="card-img" loading="lazy">
+      <div class="card-body">
+        <div class="card-cat">Заметки мастера</div>
+        <div class="card-title">Почему я перехожу на LED-наращивание ресниц</div>
+        <div class="card-excerpt">LED-наращивание вызывает много вопросов. Расскажу, почему перехожу на эту систему и чем она отличается от классического наращивания.</div>
+        <div class="card-meta">
+          <span class="card-date">10 мая 2026</span>
+          <span class="card-read">Читать <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Статья 2 -->
+    <a href="/blog/uhod-posle-naraschivaniya.html" class="card">
+      <img src="/blog/cover.png" alt="Уход за ресницами после наращивания" class="card-img" loading="lazy">
+      <div class="card-body">
+        <div class="card-cat">Заметки мастера</div>
+        <div class="card-title">Уход за ресницами: что важно знать после наращивания</div>
+        <div class="card-excerpt">Один из самых частых вопросов после процедуры — как теперь умываться и что делать, чтобы ресницы дольше носились.</div>
+        <div class="card-meta">
+          <span class="card-date">7 мая 2026</span>
+          <span class="card-read">Читать <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Статья 3 -->
+    <a href="/blog/krasnye-glaza.html" class="card">
+      <img src="/blog/cover.png" alt="Красные глаза после наращивания ресниц" class="card-img" loading="lazy">
+      <div class="card-body">
+        <div class="card-cat">Заметки мастера</div>
+        <div class="card-title">Почему после наращивания бывают красные глаза</div>
+        <div class="card-excerpt">Многие думают, что покраснение — это ожог. Но в большинстве случаев причина совсем другая.</div>
+        <div class="card-meta">
+          <span class="card-date">3 мая 2026</span>
+          <span class="card-read">Читать <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Статья 4 -->
+    <a href="/blog/materialy.html" class="card">
+      <img src="/blog/cover.png" alt="Материалы для наращивания ресниц" class="card-img" loading="lazy">
+      <div class="card-body">
+        <div class="card-cat">Заметки мастера</div>
+        <div class="card-title">Какие материалы я использую и почему это важно</div>
+        <div class="card-excerpt">Многие думают, что результат наращивания зависит только от техники мастера. На самом деле материалы играют огромную роль.</div>
+        <div class="card-meta">
+          <span class="card-date">28 апреля 2026</span>
+          <span class="card-read">Читать <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ── FOOTER ───────────────────────────── -->
+<footer class="footer">
+  <div class="footer-logo">Maaybe Lash</div>
+  <div class="footer-sub">Наращивание ресниц · Казань</div>
+  <div class="footer-row">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.18h3a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.82a16 16 0 006.29 6.29l.95-.95a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    <a href="tel:+79872510266">+7 (987) 251-02-66</a>
+  </div>
+  <div class="footer-row">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    Казань, ул. Чуйкова 2А
+  </div>
+  <div class="footer-row">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    Пн–Вс: 9:00 – 21:00
+  </div>
+  <div class="footer-copy">© 2026 Maaybe Lash · Казань · Ильнара Магадеева</div>
+</footer>
+
+<div class="bottom-spacer"></div>
+
+<!-- ── BOTTOM NAV ────────────────────────── -->
+<nav class="bottom-nav">
+  <a href="https://t.me/tourttty" target="_blank" rel="noopener noreferrer" class="nav-item">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+    Telegram
+  </a>
+  <a href="https://max.ru/u/f9LHodD0cOKUH4Y4M5BEUObWbuNbG3Q5dssspVFIgyxtriH-PaD_sNgqJ8Y" target="_blank" rel="noopener noreferrer" class="nav-item nav-max">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+    MAX
+  </a>
+  <a href="https://t.me/tourttty" target="_blank" rel="noopener noreferrer" class="nav-item center-nav">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Запись
+  </a>
+  <a href="/" class="nav-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    Главная
+  </a>
+  <a href="/blog.html" class="nav-item active-nav">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+    Блог
+  </a>
+</nav>
+
+</body>
+</html>
