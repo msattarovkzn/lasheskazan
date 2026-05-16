@@ -74,6 +74,7 @@ body{
   padding:36px 24px 28px;
   background:#fff;
   border-bottom:1px solid rgba(233,30,140,.09);
+  width:100%;
 }
 .blog-intro-label{
   font-size:11px;font-weight:800;letter-spacing:1.2px;
@@ -189,13 +190,17 @@ body{
 }
 .nav-item.active-nav{color:var(--pk)}
 
-/* ── DESKTOP CARDS ──────────────────────── */
+/* ── DESKTOP ────────────────────────────── */
 @media(min-width:769px){
-  .blog-intro{padding:48px 40px 36px;max-width:760px}
+  /* Intro — белый фон на всю ширину, текст по центру */
+  .blog-intro{padding:56px 40px 44px}
+  .blog-intro-inner{max-width:680px;margin:0 auto}
   .blog-intro-title{font-size:32px}
   .blog-intro-text{font-size:15px}
-  .sec{padding:40px}
-  .cards-grid{grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto}
+
+  /* Секция статей */
+  .sec{padding:40px;max-width:980px;margin:0 auto}
+  .cards-grid{grid-template-columns:1fr 1fr;gap:24px}
   .card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(233,30,140,.2)}
 }
 </style>
@@ -220,11 +225,13 @@ body{
 
 <!-- ── BLOG INTRO ────────────────────────── -->
 <div class="blog-intro">
-  <div class="blog-intro-label">Заметки мастера</div>
-  <div class="blog-intro-title">Пишу о ресницах честно и без лишних слов</div>
-  <div class="blog-intro-text">
-    <p>О наращивании ресниц, комфорте глаз и уходе — простым и понятным языком.</p>
-    <p>Честные ответы на частые вопросы, разборы реальных ситуаций и рекомендации после процедуры.</p>
+  <div class="blog-intro-inner">
+    <div class="blog-intro-label">Заметки мастера</div>
+    <div class="blog-intro-title">Пишу о ресницах честно и без лишних слов</div>
+    <div class="blog-intro-text">
+      <p>О наращивании ресниц, комфорте глаз и уходе — простым и понятным языком.</p>
+      <p>Честные ответы на частые вопросы, разборы реальных ситуаций и рекомендации после процедуры.</p>
+    </div>
   </div>
 </div>
 
